@@ -4,15 +4,31 @@ import { useState } from "react";
 const menuItems = [
   {
     name: "Home",
-    href: "#",
+    href: "/",
   },
   {
     name: "About",
-    href: "#",
+    href: "/about",
+  },
+  {
+    name: "Service",
+    href: "/service",
+  },
+  {
+    name: "Achievers",
+    href: "/achievers",
+  },
+  {
+    name: "Gallery",
+    href: "/gallery",
+  },
+  {
+    name: "Admission",
+    href: "/admission",
   },
   {
     name: "Contact",
-    href: "#",
+    href: "/contact",
   },
 ];
 const Navbar = () => {
