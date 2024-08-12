@@ -123,3 +123,37 @@ body {
   font-weight: 900;
   font-style: italic;
 }
+
+/* antd Css */
+
+.ant-form-item-explain-error {
+  position: absolute;
+}
+.ant-form-vertical .ant-form-item-label {
+  padding: 0;
+}
+.ant-input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+.ant-select-item-option {
+  font-weight: 500;
+}
+.ant-form-item-required {
+  color: white !important;
+}
+.ant-form-item-label {
+  color: white !important;
+}
+.ant-form-item-has-error {
+  background-color: transparent !important;
+}
+.ant-input-outlined.ant-input-status-error {
+  background-color: transparent !important;
+}
+.ant-select-selector {
+  background-color: transparent !important;
+}
+.ant-select-selection-placeholder {
+  color: gray !important;
+}

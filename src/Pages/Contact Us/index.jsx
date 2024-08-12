@@ -1,30 +1,34 @@
 const locations = [
   {
-    title: "Bengaluru office",
-    timings: "Mon-Sat 9am to 5pm.",
-    address: "100, Electronic City Phase-1, Bengaluru, Karnataka 560100 IN",
+    title: "Ahmedabad office",
+    timings: "Mon-Sat 6am to 10:30pm.",
+    address:
+      "308 3rd Floor Pearl Plaza Nr Maharshi Sandipani School Haridarshan Cross, Road, Naroda, Ahmedabad, Gujarat 382330",
   },
 ];
 const ContactUs = () => {
   return (
     <div>
-      <div className="mx-auto max-w-7xl px-4">
+      <div className="mx-auto max-w-7xl px-4 py-28">
+        <div className="justify-center text-center text-orange-600 font-bold text-3xl md:text-5xl">
+          ContactUs
+        </div>
         <div className="mx-auto max-w-7xl py-12 md:py-24">
           <div className="grid items-center justify-items-center gap-x-4 gap-y-10 lg:grid-cols-2">
             {/* contact from */}
             <div className="flex items-center justify-center">
               <div className="px-2 md:px-12">
-                <p className="text-2xl font-bold text-gray-900 md:text-4xl">
+                <p className="text-2xl font-bold text-orange-600 md:text-4xl">
                   Get in touch
                 </p>
-                <p className="mt-4 text-lg text-gray-600">
+                <p className="mt-4 text-lg text-white">
                   Our friendly team would love to hear from you.
                 </p>
                 <form action="" className="mt-8 space-y-4">
                   <div className="grid w-full gap-y-4 md:gap-x-4 lg:grid-cols-2">
                     <div className="grid w-full  items-center gap-1.5">
                       <label
-                        className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        className="text-sm font-medium leading-none text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         htmlFor="first_name"
                       >
                         First Name
@@ -38,7 +42,7 @@ const ContactUs = () => {
                     </div>
                     <div className="grid w-full  items-center gap-1.5">
                       <label
-                        className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        className="text-sm font-medium leading-none text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         htmlFor="last_name"
                       >
                         Last Name
@@ -53,7 +57,7 @@ const ContactUs = () => {
                   </div>
                   <div className="grid w-full  items-center gap-1.5">
                     <label
-                      className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      className="text-sm font-medium leading-none text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                       htmlFor="email"
                     >
                       Email
@@ -67,7 +71,7 @@ const ContactUs = () => {
                   </div>
                   <div className="grid w-full  items-center gap-1.5">
                     <label
-                      className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      className="text-sm font-medium leading-none text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                       htmlFor="phone_number"
                     >
                       Phone number
@@ -81,7 +85,7 @@ const ContactUs = () => {
                   </div>
                   <div className="grid w-full  items-center gap-1.5">
                     <label
-                      className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      className="text-sm font-medium leading-none text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                       htmlFor="message"
                     >
                       Message
@@ -95,7 +99,7 @@ const ContactUs = () => {
                   </div>
                   <button
                     type="button"
-                    className="w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                    className="w-full rounded-md border dark:border-gray-700 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                   >
                     Send Message
                   </button>
@@ -111,15 +115,15 @@ const ContactUs = () => {
         </div>
       </div>
       {/* Address */}
-      <div className="rounded-lg bg-gray-100">
+      <div className="rounded-lg ">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="py-20">
+          <div className="pb-20">
             <div className="grid grid-cols-1 gap-x-20 gap-y-8 lg:grid-cols-2">
               <div className="space-y-4">
-                <p className="w-full text-4xl font-bold text-gray-900">
+                <p className="w-full text-4xl font-bold text-orange-600">
                   Our Offices
                 </p>
-                <p className="w-full text-lg text-gray-600">
+                <p className="w-full text-lg text-white">
                   Find us at these locations.
                 </p>
               </div>
@@ -129,13 +133,13 @@ const ContactUs = () => {
                     key={location.title}
                     className="flex flex-col space-y-2 pt-4 first:pt-0 lg:w-full"
                   >
-                    <p className="w-full text-xl font-semibold  text-gray-900">
+                    <p className="w-full text-xl font-semibold  text-orange-600">
                       {location.title}
                     </p>
-                    <p className="w-full text-base  text-gray-600">
+                    <p className="w-full text-base  text-white">
                       {location.timings}
                     </p>
-                    <p className="text-sm font-semibold text-gray-600">
+                    <p className="text-sm font-semibold text-white">
                       {location.address}
                     </p>
                   </div>
