@@ -38,21 +38,21 @@ const Gallery = () => {
         <div className="text-[66px] text-center text-orange-600 font-bold">
           GALLERY
         </div>
-        <h1 className="text-9xl font-bold ">Athletic Aim</h1>
+        <h1 className="text-9xl font-bold opacity-10">Athletic Aim</h1>
       </div>
 
-      <div className="bg-[linear-gradient(223deg,_#262261_60%,_#e63825_100%)] w-[75%] min-h-[285px] relative rounded-tr-[90px] flex ">
-        <div className="mt-[5%] ml-[4%] ">
+      <div className="bg-[linear-gradient(223deg,_#262261_60%,_#e63825_100%)] w-[80%]  rounded-tr-[100px] flex justify-around ">
+        <div className="px-10 py-6 w-1/2">
           <h1 className="text-5xl font-bold ">Our Gallery</h1>
-          <p className="w-[55%] mt-6">
+          <p className="w-full mt-6">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry’s standard dummy text
             ever since the 1500s.
           </p>
         </div>
-        <div className="relative scale-[1.5] mr-[24%] ">
+        <div className="flex items-center h-[300px]">
           <img
-            className="w-[150%]"
+            className="w-[280px] h-[250px]"
             src="https://template-kit.evonicmedia.com/layout43/wp-content/uploads/2023/11/floorball-female-player-isolated-white-action-motion-concept.png"
             alt=""
           />
@@ -76,7 +76,7 @@ const Gallery = () => {
       <div className="w-[75%] h-full  flex flex-wrap gap-2 ">
         {url.map((u) => {
           return (
-            <div className="w-[218px] h-[280px] bg-red-600 ">
+            <div className="w-[218px] h-[280px] bg-red-600 " key={u.img}>
               <img src={u.img} alt="" />
             </div>
           );

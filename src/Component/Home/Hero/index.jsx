@@ -11,7 +11,7 @@ function index() {
     <main className="h-screen w-full container ">
       <div className="flex items-center h-full w-full  lg:flex-row flex-col gap-10">
         {/* Left Side */}
-        <div className="lg:w-[40%]">
+        <div className="lg:w-1/2">
           <div className="uppercase font-bold">
             <span className="md:text-4xl text-xl">Be the </span>
             <br />
@@ -39,10 +39,10 @@ function index() {
           </div>
         </div>
         {/* Right Side */}
-        <div className="h-1/2 relative lg:w-[60%] w-full bg-gradient-to-tr from-red-700/70 to-blue-950 rounded-tr-[100px]">
+        <div className="h-1/2 relative lg:w-1/2 w-full bg-gradient-to-tr from-red-700/70 to-blue-950 rounded-tr-[100px]">
          
           <div className="relative">
-            <div className="absolute flex justify-start h-[300px]">
+            <div className="absolute flex justify-center w-full h-[280px]">
               <img
                 src={bgImage}
                 alt="bg-Image-For-HeroSection"
