@@ -34,7 +34,7 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center py-28">
-      <div className="abso">
+      <div>
         <div className="text-[66px] text-center text-orange-600 font-bold">
           GALLERY
         </div>
