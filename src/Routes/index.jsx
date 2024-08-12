@@ -11,7 +11,7 @@ import Service from "../Pages/Service";
 
 const AppRoutes = () => {
   return (
-    <>
+    <main className="bg-neutral-950 text-white  ">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -23,7 +23,7 @@ const AppRoutes = () => {
         <Route path="/Contact" element={<ContactUs />} />
       </Routes>
       <Footer />
-    </>
+    </main>
   );
 };
 export default AppRoutes;
