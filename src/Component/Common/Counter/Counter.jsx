@@ -34,7 +34,7 @@ const Counter = ({ countTo, duration }) => {
     };
   }, [countTo, duration]);
 
-  return <div className="text-4xl">{count}</div>;
+  return <div className="md:text-4xl">{count}</div>;
 };
 
 Counter.propTypes = {

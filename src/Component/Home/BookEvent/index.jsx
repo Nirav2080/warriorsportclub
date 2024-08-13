@@ -8,7 +8,7 @@ import SetImage3 from "../../../assets/Home/Event/SetImage3.jpg";
 
 function index() {
   return (
-    <div className="bg-neutral-950 md:mt-0 my-16">
+    <div className="bg-neutral-950 md:mt-0 mb-16 ">
       <div className="bg-[#262261] mx-auto w-[86%] py-10 px-5 flex md:flex-row flex-col gap-10 my-10">
         {/* Left Side */}
         <div className="flex gap-3 justify-around md:flex-row flex-col md:space-y-0 space-y-3 md:items-center md:w-[40%]">
@@ -27,7 +27,7 @@ function index() {
         {/* Right Side */}
         <div className="md:w-[60%] flex items-center ">
           {/* Image Section */}
-          <div className="md:w-1/3 bg-gradient-to-tr from-red-700/70 to-blue-950 rounded-tr-[100px]">
+          <div className="md:w-1/3 bg-gradient-to-tr from-red-700/70 to-blue-950 rounded-tr-3xl">
             <img
               src={BasketBall}
               alt="BasketBallImage"
