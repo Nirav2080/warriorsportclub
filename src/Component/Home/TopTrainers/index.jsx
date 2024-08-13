@@ -44,7 +44,17 @@ function index() {
         </h3>
       </div>
 
-      <div className=""></div>
+      <div className="grid md:grid-cols-4 grid-cols-2 gap-10">
+        {TopTrainers.map((data) => (
+          <div className="" key={data.id}>
+            <img src={data.image} alt={data.name} />
+            <div className="text-center">
+              <h3 className="font-bold text-2xl">{data.name}</h3>
+              <p>{data.experience}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

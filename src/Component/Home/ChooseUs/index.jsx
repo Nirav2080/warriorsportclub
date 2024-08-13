@@ -54,16 +54,16 @@ function index() {
                   className="hover:scale-110 transition-all duration-200 "
                 />
               </div>
-              <h4 className="text-center text-sm mt-2"> {data.title} </h4>
+              <h4 className="text-center md:text-sm mt-2 font-semibold text-xl"> {data.title} </h4>
             </div>
           ))}
         </div>
 
-        <div className="flex gap-10 pb-7 md:w-[80%]">
-          <button className="bg-orange-600 md:w-1/2 lg:text-base text-sm w-fit px-6 py-3 text-white hover:bg-white hover:text-orange-600 transition-all duration-300">
+        <div className="flex md:flex-row f md:gap-10 gap-3 pb-7 md:w-[80%]">
+          <button className="bg-orange-600 md:w-1/2 w-fit lg:text-base text-sm  px-6 py-3 text-white hover:bg-white hover:text-orange-600 transition-all duration-300">
             Find Out More
           </button>
-          <button className="text-orange-500 md:w-1/2 lg:text-base text-sm w-fit md:px-2 px-6 py-3 bg-white hover:bg-orange-600 hover:text-white transition-all duration-300 ">
+          <button className="text-orange-500 md:w-1/2 w-fit lg:text-base text-sm  md:px-2 px-6 py-3 bg-white hover:bg-orange-600 hover:text-white transition-all duration-300 ">
             Become A Member
           </button>
         </div>
