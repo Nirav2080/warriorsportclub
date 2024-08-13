@@ -36,7 +36,7 @@ function index() {
   return (
     <div className="container">
       <div className="text-center space-y-4">
-        <h1 className="md:text-4xl text-2xl font-bold">Our Top Trainers</h1>
+        <h1 className="md:text-4xl text-2xl font-bold text-orange-700 font-bold">Our Top Trainers</h1>
         <h3 className="md:w-3/4 w-full mx-auto md:text-lg ">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry’s standard dummy text ever
@@ -44,9 +44,9 @@ function index() {
         </h3>
       </div>
 
-      <div className="grid md:grid-cols-4 grid-cols-2 gap-10">
+      <div className="grid md:grid-cols-4 grid-cols-2 gap-10 mt-10">
         {TopTrainers.map((data) => (
-          <div className="" key={data.id}>
+          <div className="space-y-5" key={data.id}>
             <img src={data.image} alt={data.name} />
             <div className="text-center">
               <h3 className="font-bold text-2xl">{data.name}</h3>

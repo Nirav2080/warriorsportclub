@@ -59,7 +59,7 @@ const countersData = [
 function Index() {
   return (
     <div className="container my-28">
-      <h1 className="text-center md:text-4xl text-2xl font-semibold capitalize">
+      <h1 className="text-center md:text-4xl text-2xl text-orange-700 font-bold capitalize">
         our sports arena in just numbers
       </h1>
       <p className="text-center">
