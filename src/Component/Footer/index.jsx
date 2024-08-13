@@ -19,9 +19,9 @@ export default function Footer() {
   return (
     <div
       style={{ ...FooterImg, backgroundPositionX: "left" }}
-      className="w-full mt-24 text-white bg-gray-100 pb-36 dark:bg-gray-800"
+      className="w-full mt-24 text-white bg-gray-100 pt-20 dark:bg-gray-800"
     >
-      <footer className="container grid py-10">
+      <footer className="mx-10 grid py-10">
         <Row gutter={[16, 16]}>
           <Col lg={8} span={24}>
             <div className="pt-5 text-center md:text-start">
@@ -48,9 +48,9 @@ export default function Footer() {
                 <h1 className="pb-12 ml-4 text-2xl font-bold"> Get in Touch</h1>
               </div>
 
-              <div className="flex flex-col space-y-5">
-                <div className="flex gap-2">
-                  <CiLocationOn className="w-24" />
+              <div className="flex flex-col  space-y-5">
+                <div className="flex items-center gap-2">
+                  <CiLocationOn className="lg:w-24 md:w-14 w-20 " />
                   <Link
                     to="https://maps.app.goo.gl/TKWf7JvD6T2d9hfw7"
                     target="_blank"
@@ -60,14 +60,14 @@ export default function Footer() {
                   </Link>
                 </div>
 
-                <div className="flex gap-2">
+                <div className="flex items-center gap-2">
                   <CiMobile3 className="w-10" />
                   <Link to="tel:+918866187676" target="_blank">
                     +91 8866187676
                   </Link>
                 </div>
 
-                <div className="flex gap-2">
+                <div className="flex items-center gap-2">
                   <CiMail className="w-10" />
                   <Link target="_blank" to="mailto:fameadda18@gmail.com">
                     shashwatchovatiya316@gmail.com
@@ -79,7 +79,7 @@ export default function Footer() {
 
           {/* Updated layout to use Row and Col for side-by-side display on mobile */}
           <Col lg={8} span={24} className="md:container ">
-            <Row gutter={[8, 8]} className="mr-10">
+            <Row gutter={[10, 10]} className="mr-10">
               {/* Learn More Section */}
               <Col xs={12} span={24}>
                 <div className="pt-5">
@@ -144,15 +144,8 @@ export default function Footer() {
           </Col>
         </Row>
       </footer>
-      <span
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <p>©2024 Warriors Sports Club. All rights reserved.</p>
-      </span>
+
+        <p className="bottom-0 text-black font-bold text-center">©2024 Warriors Sports Club. All rights reserved.</p>
     </div>
   );
 }

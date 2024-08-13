@@ -8,7 +8,7 @@ import SetImage3 from "../../../assets/Home/Event/SetImage3.jpg";
 
 function Index() {
   return (
-    <div className="bg-neutral-950 lg:my-16 mt-40">
+    <div className="bg-neutral-950 lg:py-10 mt-40">
       {/* Event Section */}
       <div className="bg-[#262261] mx-auto w-[90%] py-10 px-5 flex flex-col md:flex-row gap-10 mt-10">
         {/* Left Side */}
@@ -24,7 +24,7 @@ function Index() {
               <span>Amenities</span>
             </div>
             <div className="text-red-200 cursor-pointer">
-              {" "}
+             
               &gt; Book A Tour{" "}
             </div>
           </div>
@@ -37,11 +37,11 @@ function Index() {
             <img
               src={BasketBall}
               alt="BasketBallImage"
-              className="h-[200px] w-full object-cover"
+              className="md:h-[200px] w-full object-cover"
             />
           </div>
           {/* Text Section */}
-          <div className="border-red-700 border border-l-0 w-full md:w-2/3 p-4 text-xs md:text-base">
+          <div className="border-red-700 border border-l-0 w-full md:w-2/3 p-4 text-lg md:text-base">
             <span className="font-bold">Event :</span>
             <p className="text-gray-300 mt-2">
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -57,10 +57,10 @@ function Index() {
       </div>
 
       {/* Next Section */}
-      <div className="container mx-auto w-[90%]">
-        <div className="flex flex-col md:flex-row gap-10 mt-10">
+      <div className="md:px-10 px-5 w-[100%]">
+        <div className="flex flex-col lg:flex-row gap-10 mt-10">
           {/* Image Section */}
-          <div className="flex w-full md:w-1/2 items-center gap-5 md:h-[350px] ">
+          <div className="flex w-full lg:w-1/2 items-center gap-5 md:h-[350px] ">
             <div className="flex flex-col gap-5 w-[30%] h-full">
               <img
                 src={SetImage1}

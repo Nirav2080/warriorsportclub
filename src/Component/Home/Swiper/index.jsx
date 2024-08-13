@@ -8,7 +8,7 @@ import face5 from "../../../assets/Home/Swiper/face-5.jpg";
 import { IoMdStar } from "react-icons/io";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -58,9 +58,9 @@ const RolesData = [
 
 function index() {
   return (
-    <div className="container  py-10 space-y-10">
-      <div className="text-center">
-        <h1 className="text-orange-600 text-2xl md:text-4xl ">Testimonials</h1>
+    <div className="container md:mt-0 mt-10  py-10 space-y-10">
+      <div className="text-center md:space-y-0 space-y-3">
+        <h1 className="text-orange-600 text-2xl md:text-4xl font-bold ">Testimonials</h1>
         <p className="md:w-2/3 mx-auto">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry’s standard dummy text ever
@@ -73,24 +73,23 @@ function index() {
         <Swiper
           loop={true}
           className="h-full"
-          pagination={{
-            clickable: true,
-            dynamicBullets: true,
-          }}
           slidesPerView={3}
-          // centeredSlides={true}
           spaceBetween={25}
           centeredSlidesBounds={true}
-          modules={[Navigation, Pagination]}
+          modules={[Navigation, Pagination, A11y, Autoplay]}
+          autoplay={{ delay: 3000 }}
           breakpoints={{
             1024: {
               slidesPerView: 2, // 2 slides for tablet view
+              loop: true,
             },
             768: {
               slidesPerView: 2, // 2 slides for tablet view
+              loop: true,
             },
             0: {
               slidesPerView: 1, // 1 slide for mobile view
+              loop: true,
             },
           }}
         >

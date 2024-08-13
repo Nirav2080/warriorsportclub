@@ -8,7 +8,7 @@ const countersData = [{ countTo: 100, duration: 1000 }];
 
 const HeroSection = () => {
   return (
-    <main className="max-h-screen w-full  mx-auto  flex items-center container lg:pt-36 pt-56">
+    <main className="max-h-screen w-full  mx-auto  flex items-center container lg:pt-40 pt-56">
       <div className="flex flex-col lg:flex-row items-center w-full gap-10">
         {/* Left Side */}
         <div className="lg:w-1/2 w-full text-center lg:text-left">

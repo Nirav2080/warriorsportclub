@@ -67,7 +67,7 @@ function Index() {
         industry.
       </p>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 my-10 md:gap-0 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 my-10 lg:gap-0 gap-4">
         {MainData.map((data) => {
           const counter = countersData.find(
             (counter) => counter.id === data.id
