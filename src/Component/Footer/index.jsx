@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 
-import React from "react";
 import { Col, Row } from "antd";
+import React from "react";
+import { CiLocationOn, CiMail, CiMobile3 } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import { CiLocationOn, CiMobile3, CiMail } from "react-icons/ci";
 import img from "../../assets/Footer/footer.jpg";
 
 const FooterImg = {
@@ -62,15 +62,15 @@ export default function Footer() {
 
                 <div className="flex items-center gap-2">
                   <CiMobile3 className="w-10" />
-                  <Link to="tel:+918866187676" target="_blank">
-                    +91 8866187676
+                  <Link to="tel:+919979392775" target="_blank">
+                    +91 9979392775
                   </Link>
                 </div>
 
                 <div className="flex items-center gap-2">
                   <CiMail className="w-10" />
                   <Link target="_blank" to="mailto:fameadda18@gmail.com">
-                    shashwatchovatiya316@gmail.com
+                    abc@gmail.com
                   </Link>
                 </div>
               </div>
@@ -145,7 +145,9 @@ export default function Footer() {
         </Row>
       </footer>
 
-        <p className="bottom-0 text-black font-bold text-center">©2024 Warriors Sports Club. All rights reserved.</p>
+      <p className="bottom-0 text-black font-bold text-center">
+        ©2024 Warriors Sports Club. All rights reserved.
+      </p>
     </div>
   );
 }
