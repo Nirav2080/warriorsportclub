@@ -1,33 +1,33 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { FaRegThumbsUp } from "react-icons/fa";
-import img3 from "../../../assets/Home/CounterOfAllArea/Man.png";
-import img2 from "../../../assets/Home/CounterOfAllArea/Medal.png";
-import img4 from "../../../assets/Home/CounterOfAllArea/Throfy.png";
+import { GoTrophy } from "react-icons/go";
+import { IoManOutline } from "react-icons/io5";
+import { LuMedal } from "react-icons/lu";
 import Counter from "../../Common/Counter/Counter";
 
 const MainData = [
   {
     id: 1,
-    icon: <FaRegThumbsUp />,
+    icon: <FaRegThumbsUp className="w-16 h-16 text-orange-600" />,
     number: "5K",
     descriptions: "Members Active",
   },
   {
     id: 2,
-    icon: img2,
+    icon: <LuMedal className="w-16 h-16  text-orange-600 " />,
     number: "20",
     descriptions: "Games Cover",
   },
   {
     id: 3,
-    icon: img3,
+    icon: <IoManOutline className=" w-16 h-16 text-orange-600" />,
     number: "120",
     descriptions: "Professional Coach",
   },
   {
     id: 4,
-    icon: img4,
+    icon: <GoTrophy className="w-16 h-16 text-orange-600" />,
     number: "13",
     descriptions: "Years of Experience",
   },
@@ -74,26 +74,19 @@ function Index() {
           );
           return (
             <div
-              className="flex md:gap-10 gap-5 lg:justify-center items-center w-full mx-auto border-r-4 px-3"
+              className="flex md:gap-10 gap-5 lg:justify-center items-center w-full mx-auto border-r-4 md:px-3 pr-3"
               key={data.id}
             >
-              <img
-                src={data.icon}
-                alt={data.descriptions}
-                className="md:w-14 md:h-16 w-10 h-10 "
-              />
-              {/* <div className="md:w-auto w-10 h-10 ">
-                <img src={data.icon} alt={data.descriptions} className="w-" />
-              </div> */}
+              {data.icon}
               <div>
-                <h1 className="text-xl  font-semibold md:font-bold flex gap-2">
+                <h1 className="md:text-xl text-lg font-semibold md:font-bold flex gap-2">
                   <Counter
                     countTo={counter.countTo}
                     duration={counter.duration}
                   />{" "}
                   +
                 </h1>
-                <h4>{data.descriptions}</h4>
+                <h4 className="md:text-lg text-sm">{data.descriptions}</h4>
               </div>
             </div>
           );

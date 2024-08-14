@@ -58,7 +58,7 @@ const RolesData = [
 
 function index() {
   return (
-    <div className="container md:mt-0 mt-10  py-10 space-y-10">
+    <div className="container md:mt-0 mt-10  py-10">
       <div className="text-center md:space-y-0 space-y-3">
         <h1 className="text-orange-600 text-2xl md:text-4xl font-bold ">Testimonials</h1>
         <p className="md:w-2/3 mx-auto">
@@ -69,7 +69,7 @@ function index() {
       </div>
 
       {/* Card Section  */}
-      <div className="md:px-10 h-full">
+      <div className="md:px-10 h-full mt-10">
         <Swiper
           loop={true}
           className="h-full"
@@ -77,7 +77,7 @@ function index() {
           spaceBetween={25}
           centeredSlidesBounds={true}
           modules={[Navigation, Pagination, A11y, Autoplay]}
-          autoplay={{ delay: 3000 }}
+          autoplay={{ delay: 30000 }}
           breakpoints={{
             1024: {
               slidesPerView: 2, // 2 slides for tablet view
