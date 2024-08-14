@@ -55,8 +55,8 @@ export default function Footer() {
                     to="https://maps.app.goo.gl/TKWf7JvD6T2d9hfw7"
                     target="_blank"
                   >
-                    B-503, Divyajivan Elegance, Nikol Gam Rd, opp. Vrundavan
-                    Farm, Jivanvadi, Nicol Gam, Nikol, Ahmedabad, Gujarat 382350
+                    308 3rd Floor Pearl Plaza Nr Maharshi Sandipani School
+                    Haridarshan Cross, Road, Naroda, Ahmedabad, Gujarat 382330
                   </Link>
                 </div>
 
