@@ -1,7 +1,7 @@
-import Image1 from "../../../assets/Home/Event/Marathone.png";
-import Image2 from "../../../assets/Home/Event/Football.png";
-import Image3 from "../../../assets/Home/Event/Rugebi.png";
 import Image4 from "../../../assets/Home/Event/Baseball.png";
+import Image2 from "../../../assets/Home/Event/Football.png";
+import Image1 from "../../../assets/Home/Event/Marathone.png";
+import Image3 from "../../../assets/Home/Event/Rugebi.png";
 
 const GamesData = [
   {
@@ -29,7 +29,7 @@ const GamesData = [
 function Index() {
   return (
     <main>
-      <div className="flex justify-center flex-col items-center space-y-2 container mt-10">
+      <div className="flex justify-center flex-col items-center space-y-2  container mt-10">
         <h3 className="text-xl font-bold text-red-700">Our Academy</h3>
         <h1 className="md:text-5xl text-3xl">Games Categories</h1>
         <p className="md:w-1/2">

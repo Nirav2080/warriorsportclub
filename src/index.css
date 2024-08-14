@@ -157,3 +157,10 @@ body {
 .ant-select-selection-placeholder {
   color: gray !important;
 }
+.ant-btn {
+  background-color: transparent !important;
+}
+.ant-btn:hover {
+  background-color: rgb(234, 88, 12) !important;
+  color: white;
+}

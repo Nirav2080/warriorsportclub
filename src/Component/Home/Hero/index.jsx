@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import Counter from "../../Common/Counter/Counter";
 import bgImage from "../../../assets/Home/Hero/HeroBGBackground.png";
 import runImage from "../../../assets/Home/Hero/running.png";
+import Counter from "../../Common/Counter/Counter";
 
 const countersData = [{ countTo: 100, duration: 1000 }];
 

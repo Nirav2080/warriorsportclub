@@ -34,12 +34,10 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center py-28">
-      <div>
-        <div className="text-[66px] text-center text-orange-600 font-bold">
-          GALLERY
-        </div>
-        <h1 className="text-9xl font-bold opacity-10">Athletic Aim</h1>
+      <div className="text-[66px] text-center text-orange-600 font-bold">
+        GALLERY
       </div>
+      {/* <h1 className="text-9xl font-bold opacity-10">Athletic Aim</h1> */}
 
       <div className="bg-[linear-gradient(223deg,_#262261_60%,_#e63825_100%)] w-[80%]  rounded-tr-[100px] flex justify-around ">
         <div className="px-10 py-6 w-1/2">

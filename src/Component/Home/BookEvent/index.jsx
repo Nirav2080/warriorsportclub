@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import eventImage from "../../../assets/Home/Event/Event_image.png";
 import BasketBall from "../../../assets/Home/Event/BasketBall-ManImage.png";
+import eventImage from "../../../assets/Home/Event/Event_image.png";
 import SetImage1 from "../../../assets/Home/Event/SetImage1.jpg";
 import SetImage2 from "../../../assets/Home/Event/SetImage2.jpg";
 import SetImage3 from "../../../assets/Home/Event/SetImage3.jpg";
@@ -23,21 +23,18 @@ function Index() {
               <div>Brilliant Sports Club</div>
               <span>Amenities</span>
             </div>
-            <div className="text-red-200 cursor-pointer">
-             
-              &gt; Book A Tour{" "}
-            </div>
+            <div className="text-red-200 cursor-pointer">&gt; Book A Tour </div>
           </div>
         </div>
 
         {/* Right Side */}
         <div className="flex flex-col md:flex-row md:w-[60%] items-center gap-4">
           {/* Image Section */}
-          <div className="w-full md:w-1/3 bg-gradient-to-tr from-red-700/70 to-blue-950 rounded-tr-3xl">
+          <div className="w-full md:w-1/3 bg-gradient-to-tr from-red-700/70 to-blue-950 rounded-tr-3xl lg:object-top">
             <img
               src={BasketBall}
               alt="BasketBallImage"
-              className="md:h-[200px] w-full object-cover"
+              className="md:h-[250px] w-full object-cover"
             />
           </div>
           {/* Text Section */}
@@ -57,7 +54,7 @@ function Index() {
       </div>
 
       {/* Next Section */}
-      <div className="md:px-10 px-5 w-[100%]">
+      <div className="md:px-20 px-9 w-[100%]">
         <div className="flex flex-col lg:flex-row gap-10 mt-10">
           {/* Image Section */}
           <div className="flex w-full lg:w-1/2 items-center gap-5 md:h-[350px] ">
@@ -73,7 +70,7 @@ function Index() {
                 className="h-full object-cover rounded-lg"
               />
             </div>
-            <div className="w-[70%] h-full">
+            <div className="md:w-[100%] w-[65%] h-full">
               <img
                 src={SetImage3}
                 alt="SetImage3"
@@ -83,7 +80,7 @@ function Index() {
           </div>
 
           {/* Text Section */}
-          <div className="flex flex-col justify-center md:w-1/2 space-y-4">
+          <div className="flex flex-col justify-center lg:w-1/2 space-y-4">
             <div className="text-3xl md:text-5xl font-bold">
               Stay connected. Stay active. Play hard.
             </div>

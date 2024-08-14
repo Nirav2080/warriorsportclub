@@ -1,155 +1,189 @@
-const locations = [
-  {
-    title: "Ahmedabad office",
-    timings: "Mon-Sat 6am to 10:30pm.",
-    address:
-      "308 3rd Floor Pearl Plaza Nr Maharshi Sandipani School Haridarshan Cross, Road, Naroda, Ahmedabad, Gujarat 382330",
-  },
-];
+import { Button, Form } from "antd";
+import { FiPhoneCall } from "react-icons/fi";
+import { GrMapLocation } from "react-icons/gr";
+import { MdMoreTime, MdOutlineMarkEmailRead } from "react-icons/md";
+import { FormInput } from "../../Component/Common/Form";
+
 const ContactUs = () => {
   return (
     <div>
+      {/* contact */}
       <div className="mx-auto max-w-7xl px-4 py-28">
-        <div className="justify-center text-center text-orange-600 font-bold text-3xl md:text-5xl">
-          ContactUs
+        <div className="text-center text-orange-600 font-bold text-3xl md:text-5xl mb-14">
+          Contact Us
         </div>
-        <div className="mx-auto max-w-7xl py-12 md:py-24">
-          <div className="grid items-center justify-items-center gap-x-4 gap-y-10 lg:grid-cols-2">
-            {/* contact from */}
-            <div className="flex items-center justify-center">
-              <div className="px-2 md:px-12">
+
+        <div className="relative w-full bg-gradient-to-tr from-red-700/70 to-blue-950 rounded-tr-[100px] pt-14 pb-10">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 md:mx-10 md:my-10">
+            {/* Right div */}
+            <div className="w-full md:w-1/2 text-center md:text-left px-4">
+              <h1 className="text-white font-bold text-3xl md:text-4xl">
+                Get Connected
+              </h1>
+              <p className="text-white mt-4">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
+                provident incidunt laudantium architecto expedita dolorem, error
+                quam eaque vero magni.
+              </p>
+            </div>
+
+            {/* Left div */}
+            <div className="w-full md:w-1/2 px-4">
+              <div className="space-y-5">
+                <div className="flex items-center">
+                  <div className="bg-red-500 rounded-full p-2 mr-3">
+                    <GrMapLocation className="h-5 w-5 text-white" />
+                  </div>
+                  <div className="text-white">
+                    308 3rd Floor Pearl Plaza Nr Maharshi Sandipani School
+                    Haridarshan Cross, Road, Naroda, Ahmedabad, Gujarat 382330
+                  </div>
+                </div>
+                <div className="flex items-center mt-5">
+                  <div className="bg-red-500 rounded-full p-2 mr-3">
+                    <MdOutlineMarkEmailRead className="h-5 w-5 text-white" />
+                  </div>
+                  <div className="text-white">Yourname@Email.Com</div>
+                </div>
+                <div className="flex items-center mt-5">
+                  <div className="bg-red-500 rounded-full p-2 mr-3">
+                    <FiPhoneCall className="h-5 w-5 text-white" />
+                  </div>
+                  <div className="text-white">+123 456 7890</div>
+                </div>
+                <div className="flex items-center mt-5">
+                  <div className="bg-red-500 rounded-full p-2 mr-3">
+                    <MdMoreTime className="h-5 w-5 text-white" />
+                  </div>
+                  <div className="text-white">
+                    Office Hours: 8AM - 11PM
+                    <br />
+                    Sunday - Weekend Day
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mx-auto max-w-7xl pt-12 md:pt-24">
+          <div className="grid justify-items-center gap-x-4 gap-y-10 lg:grid-cols-2 lg:justify-items-start">
+            {/* Contact Form */}
+
+            <div className="flex flex-col items-center md:items-start px-4">
+              <div className="text-center md:text-left">
                 <p className="text-2xl font-bold text-orange-600 md:text-4xl">
-                  Get in touch
+                  Get in Touch
                 </p>
                 <p className="mt-4 text-lg text-white">
                   Our friendly team would love to hear from you.
                 </p>
-                <form action="" className="mt-8 space-y-4">
-                  <div className="grid w-full gap-y-4 md:gap-x-4 lg:grid-cols-2">
-                    <div className="grid w-full  items-center gap-1.5">
-                      <label
-                        className="text-sm font-medium leading-none text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        htmlFor="first_name"
-                      >
-                        First Name
-                      </label>
-                      <input
-                        className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
-                        type="text"
-                        id="first_name"
-                        placeholder="First Name"
-                      />
-                    </div>
-                    <div className="grid w-full  items-center gap-1.5">
-                      <label
-                        className="text-sm font-medium leading-none text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        htmlFor="last_name"
-                      >
-                        Last Name
-                      </label>
-                      <input
-                        className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
-                        type="text"
-                        id="last_name"
-                        placeholder="Last Name"
-                      />
-                    </div>
-                  </div>
-                  <div className="grid w-full  items-center gap-1.5">
-                    <label
-                      className="text-sm font-medium leading-none text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      htmlFor="email"
-                    >
-                      Email
-                    </label>
-                    <input
-                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
-                      type="text"
-                      id="email"
-                      placeholder="Email"
-                    />
-                  </div>
-                  <div className="grid w-full  items-center gap-1.5">
-                    <label
-                      className="text-sm font-medium leading-none text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      htmlFor="phone_number"
-                    >
-                      Phone number
-                    </label>
-                    <input
-                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
-                      type="tel"
-                      id="phone_number"
-                      placeholder="Phone number"
-                    />
-                  </div>
-                  <div className="grid w-full  items-center gap-1.5">
-                    <label
-                      className="text-sm font-medium leading-none text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      htmlFor="message"
-                    >
-                      Message
-                    </label>
-                    <textarea
-                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
-                      id="message"
-                      placeholder="Leave us a message"
-                      cols={3}
-                    />
-                  </div>
-                  <button
-                    type="button"
-                    className="w-full rounded-md border dark:border-gray-700 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                  >
-                    Send Message
-                  </button>
-                </form>
               </div>
+              <Form
+                name="basic"
+                layout="vertical"
+                // onFinish={onFinish}
+                autoComplete="off"
+                className="register-form mx-auto w-60 pt-2 sm:w-96 "
+              >
+                <Form.Item
+                  className="text-lg font-semibold"
+                  rules={[
+                    { required: true, message: "Please enter your full name" },
+                  ]}
+                  name="name"
+                  label={"Full Name"}
+                >
+                  <FormInput
+                    placeholder={"Enter your full name"}
+                    className="h-10 rounded-md bg-transparent hover:bg-transparent text-white focus:bg-transparent target:bg-transparent hover:target:bg-transparent placeholder:text-gray-500"
+                    autoComplete="text"
+                  />
+                </Form.Item>
+                <Form.Item
+                  className="text-lg font-semibold"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please enter your phone number",
+                    },
+                    {
+                      max: 10,
+                      min: 10,
+                      message: "Please enter a valid 10-digit phone number",
+                    },
+                  ]}
+                  name="mobile"
+                  label={"Phone number"}
+                >
+                  <FormInput
+                    placeholder={"Enter your phone number"}
+                    className="h-10 rounded-md bg-transparent hover:bg-transparent text-white focus:bg-transparent target:bg-transparent hover:target:bg-transparent placeholder:text-gray-500"
+                    autoComplete="tel"
+                  />
+                </Form.Item>
+
+                <Form.Item
+                  className="text-lg font-semibold"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please enter your email address",
+                    },
+                    {
+                      type: "email",
+                    },
+                  ]}
+                  name="email"
+                  label={"Email"}
+                >
+                  <FormInput
+                    placeholder={"Enter your email address"}
+                    className="h-10 rounded-md bg-transparent hover:bg-transparent text-white focus:bg-transparent target:bg-transparent hover:target:bg-transparent placeholder:text-gray-500"
+                    autoComplete="email"
+                  />
+                </Form.Item>
+
+                <Form.Item
+                  name="message"
+                  label={"Message"}
+                  className=" text-lg font-semibold"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please enter your message",
+                    },
+                    {
+                      type: "message",
+                    },
+                  ]}
+                >
+                  <FormInput
+                    placeholder={"Enter your message"}
+                    autoComplete="text"
+                    className="h-10 rounded-md bg-transparent hover:bg-transparent text-white focus:bg-transparent target:bg-transparent hover:target:bg-transparent placeholder:text-gray-500"
+                  />
+                </Form.Item>
+                <Button
+                  type="primary"
+                  className=" mt-5 h-10 w-full font-bold text-base bg-transparent border border-gray-200"
+                  htmlType="submit"
+                  // loading={isPending}
+                >
+                  Send Message
+                </Button>
+              </Form>
             </div>
+
+            {/* Image */}
             <img
               alt="Contact us"
-              className="hidden max-h-full w-full rounded-lg object-cover lg:block"
+              className="hidden lg:block max-h-full w-full rounded-lg object-cover mt-5"
               src="https://images.unsplash.com/photo-1543269664-56d93c1b41a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGhhcHB5JTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
             />
           </div>
         </div>
       </div>
-      {/* Address */}
-      <div className="rounded-lg ">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="pb-20">
-            <div className="grid grid-cols-1 gap-x-20 gap-y-8 lg:grid-cols-2">
-              <div className="space-y-4">
-                <p className="w-full text-4xl font-bold text-orange-600">
-                  Our Offices
-                </p>
-                <p className="w-full text-lg text-white">
-                  Find us at these locations.
-                </p>
-              </div>
-              <div className="space-y-4 divide-y-2">
-                {locations.map((location) => (
-                  <div
-                    key={location.title}
-                    className="flex flex-col space-y-2 pt-4 first:pt-0 lg:w-full"
-                  >
-                    <p className="w-full text-xl font-semibold  text-orange-600">
-                      {location.title}
-                    </p>
-                    <p className="w-full text-base  text-white">
-                      {location.timings}
-                    </p>
-                    <p className="text-sm font-semibold text-white">
-                      {location.address}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr className="mt-6" />
     </div>
   );
 };
