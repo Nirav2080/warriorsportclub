@@ -1,15 +1,15 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import img1 from "../../../assets/Home/CounterOfAllArea/Thumb.png";
-import img2 from "../../../assets/Home/CounterOfAllArea/Medal.png";
+import { FaRegThumbsUp } from "react-icons/fa";
 import img3 from "../../../assets/Home/CounterOfAllArea/Man.png";
+import img2 from "../../../assets/Home/CounterOfAllArea/Medal.png";
 import img4 from "../../../assets/Home/CounterOfAllArea/Throfy.png";
 import Counter from "../../Common/Counter/Counter";
 
 const MainData = [
   {
     id: 1,
-    icon: img1,
+    icon: <FaRegThumbsUp />,
     number: "5K",
     descriptions: "Members Active",
   },
@@ -74,12 +74,17 @@ function Index() {
           );
           return (
             <div
-              className="flex justify-around md:gap-0 gap-3 w-full mx-auto border-r-4 px-3"
+              className="flex md:gap-10 gap-5 lg:justify-center items-center w-full mx-auto border-r-4 px-3"
               key={data.id}
             >
-              <div className="md:w-auto  ">
-                <img src={data.icon} alt={data.descriptions}  className="w-"/>
-              </div>
+              <img
+                src={data.icon}
+                alt={data.descriptions}
+                className="md:w-14 md:h-16 w-10 h-10 "
+              />
+              {/* <div className="md:w-auto w-10 h-10 ">
+                <img src={data.icon} alt={data.descriptions} className="w-" />
+              </div> */}
               <div>
                 <h1 className="text-xl  font-semibold md:font-bold flex gap-2">
                   <Counter

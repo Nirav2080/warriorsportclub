@@ -1,46 +1,65 @@
-const Gallery = () => {
-  const url = [
-    {
-      img: "https://template-kit.evonicmedia.com/layout43/wp-content/uploads/2023/11/03-1.jpg",
-    },
-    {
-      img: "https://template-kit.evonicmedia.com/layout43/wp-content/uploads/2023/11/07-1.jpg",
-    },
-    {
-      img: "https://template-kit.evonicmedia.com/layout43/wp-content/uploads/2023/11/05-1.jpg",
-    },
-    {
-      img: "https://template-kit.evonicmedia.com/layout43/wp-content/uploads/2023/11/02-1.jpg",
-    },
-    {
-      img: "https://template-kit.evonicmedia.com/layout43/wp-content/uploads/2023/11/04-1.jpg",
-    },
-    {
-      img: "https://template-kit.evonicmedia.com/layout43/wp-content/uploads/2023/11/08-1.jpg",
-    },
-    {
-      img: "https://template-kit.evonicmedia.com/layout43/wp-content/uploads/2023/11/06-1.jpg",
-    },
-    {
-      img: "https://template-kit.evonicmedia.com/layout43/wp-content/uploads/2023/11/10-1-2.jpg",
-    },
-    {
-      img: "https://template-kit.evonicmedia.com/layout43/wp-content/uploads/2023/11/09-1-1.jpg",
-    },
-    {
-      img: "https://template-kit.evonicmedia.com/layout43/wp-content/uploads/2023/11/01-1.jpg",
-    },
-  ];
+import Basketball from "../../assets/Home/Gallery/BasketBall-2.jpg";
+import Cricket from "../../assets/Home/Gallery/Cricket.jpg";
+import Fighter from "../../assets/Home/Gallery/Fighter.jpg";
+import Hockey from "../../assets/Home/Gallery/Hockey.jpg";
+import Judo from "../../assets/Home/Gallery/Judo.jpg";
+import Rugby from "../../assets/Home/Gallery/Rugby.jpg";
+import Running from "../../assets/Home/Gallery/Running.jpg";
+import Tennis from "../../assets/Home/Gallery/Tennis.jpg";
 
+const ImageData = [
+  {
+    id: 1,
+    title: "Fighter",
+    image: Fighter,
+  },
+  {
+    id: 2,
+    title: "Hockey",
+    image: Hockey,
+  },
+
+  {
+    id: 3,
+    title: "Rugby",
+    image: Rugby,
+  },
+  {
+    id: 4,
+    title: "Judo",
+    image: Judo,
+  },
+  {
+    id: 5,
+    title: "Basketball",
+    image: Basketball,
+  },
+  {
+    id: 6,
+    title: "Cricket",
+    image: Cricket,
+  },
+  {
+    id: 7,
+    title: "Running",
+    image: Running,
+  },
+  {
+    id: 8,
+    title: "Tennis",
+    image: Tennis,
+  },
+];
+const Gallery = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center py-28">
-      <div className="text-[66px] text-center text-orange-600 font-bold">
+    <div className="pt-28">
+      <div className="md:text-6xl text-3xl text-center text-orange-600 font-bold">
         GALLERY
       </div>
-      {/* <h1 className="text-9xl font-bold opacity-10">Athletic Aim</h1> */}
 
-      <div className="bg-[linear-gradient(223deg,_#262261_60%,_#e63825_100%)] w-[80%]  rounded-tr-[100px] flex justify-around ">
-        <div className="px-10 py-6 w-1/2">
+      {/* first div */}
+      <div className="flex flex-col items-center md:flex-row bg-[linear-gradient(223deg,_#262261_60%,_#e63825_100%)] w-[90%] mx-auto rounded-tr-[100px] justify-around mt-10">
+        <div className="flex flex-col px-10 py-6 md:w-1/2 w-full content-center ">
           <h1 className="text-5xl font-bold ">Our Gallery</h1>
           <p className="w-full mt-6">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -48,37 +67,45 @@ const Gallery = () => {
             ever since the 1500s.
           </p>
         </div>
-        <div className="flex items-center h-[300px]">
+        <div className="flex items-center justify-center h-auto w-1/2">
           <img
-            className="w-[280px] h-[250px]"
+            className="md:w-96 md:h-96 w-60  "
             src="https://template-kit.evonicmedia.com/layout43/wp-content/uploads/2023/11/floorball-female-player-isolated-white-action-motion-concept.png"
             alt=""
           />
         </div>
       </div>
 
-      <div className="flex flex-col  items-center mt-24 w-[50%]">
-        <h1 className="text-5xl text-orange-600 text-center">
-          Incredible Memories In <br /> Athletic Aim
+      {/* second div */}
+      <div className="flex flex-col justify-center mt-24 lg:w-[50%] w-[70%] mx-auto">
+        <h1 className="md:text-5xl text-3xl text-orange-600 md:text-center w-full">
+          Incredible Memories In Athletic Aim
         </h1>
-        <p className="text-[#60565c] mt-5 ">
+        <p className="flex text-[#60565c] mt-5 justify-between ">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry’s standard dummy text ever
           since the 1500s, when an unknown printer took.
         </p>
-        <button className="mt-6 text-[16px]  px-10 py-3 bg-orange-600 hover:bg-blue-800 mb-10 duration-200">
-          Join Our Club
+        <button className="flex mt-10 bg-orange-600 justify-center self-center px-16 py-3 hover:bg-white hover:text-black duration-200 md:w-[50%]">
+          Find Out More
         </button>
       </div>
 
-      <div className="w-[75%] h-full  flex flex-wrap gap-2 ">
-        {url.map((u) => {
-          return (
-            <div className="w-[218px] h-[280px] bg-red-600 " key={u.img}>
-              <img src={u.img} alt="" />
-            </div>
-          );
-        })}
+      <div className="w-[75%] h-full mx-auto  grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 mt-20 justify-items-center">
+        {ImageData.map((data) => (
+          <div className="relative group overflow-hidden" key={data.id}>
+            <img
+              src={data.image}
+              alt={data.title}
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-orange-500/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+            <h3 className="absolute inset-0 flex items-center justify-center font-bold text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {data.title}
+            </h3>
+          </div>
+        ))}
       </div>
     </div>
   );

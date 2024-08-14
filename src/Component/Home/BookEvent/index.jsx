@@ -8,9 +8,9 @@ import SetImage3 from "../../../assets/Home/Event/SetImage3.jpg";
 
 function Index() {
   return (
-    <div className="bg-neutral-950 lg:py-10 mt-40">
+    <div className="my-20 md:px-12">
       {/* Event Section */}
-      <div className="bg-[#262261] mx-auto w-[90%] py-10 px-5 flex flex-col md:flex-row gap-10 mt-10">
+      <div className="bg-[#262261] mx-auto w-[90%] py-10 px-5 flex flex-col md:flex-row gap-10 mb-20">
         {/* Left Side */}
         <div className="flex flex-col md:flex-row md:w-[40%] gap-4 md:items-center">
           {/* Image Part */}
@@ -30,11 +30,11 @@ function Index() {
         {/* Right Side */}
         <div className="flex flex-col md:flex-row md:w-[60%] items-center gap-4">
           {/* Image Section */}
-          <div className="w-full md:w-1/3 bg-gradient-to-tr from-red-700/70 to-blue-950 rounded-tr-3xl lg:object-top">
+          <div className="w-full md:w-1/3 bg-gradient-to-tr from-red-700/70 to-blue-950 rounded-tr-3xl ">
             <img
               src={BasketBall}
               alt="BasketBallImage"
-              className="md:h-[250px] w-full object-cover"
+              className="md:h-[250px] w-full object-cover lg:object-top"
             />
           </div>
           {/* Text Section */}
@@ -54,10 +54,10 @@ function Index() {
       </div>
 
       {/* Next Section */}
-      <div className="md:px-20 px-9 w-[100%]">
-        <div className="flex flex-col lg:flex-row gap-10 mt-10">
+      <div className=" px-9 w-[100%]">
+        <div className="flex flex-col  lg:flex-row gap-10 mt-10">
           {/* Image Section */}
-          <div className="flex w-full lg:w-1/2 items-center gap-5 md:h-[350px] ">
+          <div className="flex w-full lg:w-1/2 text-center gap-5 md:h-[350px] ">
             <div className="flex flex-col gap-5 w-[30%] h-full">
               <img
                 src={SetImage1}

@@ -32,7 +32,7 @@ function Index() {
       <div className="flex justify-center flex-col items-center space-y-2  container mt-10">
         <h3 className="text-xl font-bold text-red-700">Our Academy</h3>
         <h1 className="md:text-5xl text-3xl">Games Categories</h1>
-        <p className="md:w-1/2">
+        <p className="md:w-full text-center">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry’s standard dummy text ever
           since the 1500s, when an unknown printer took.

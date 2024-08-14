@@ -58,18 +58,10 @@ const Service = () => {
             industry. Lorem Ipsum has been the industry’s standard dummy text
             ever since the 1500s, when an unknown printer took a galley.
           </p>
-          <div className=" flex gap-2 items-center mt-3">
-            <i className="text-3xl fa-regular fa-square-check"></i>
-            <p>Lorem Ipsum is simply dummy text.</p>
-          </div>
-          <div className=" flex gap-2 items-center mt-3">
-            <i className="text-3xl fa-regular fa-square-check"></i>
-            <p>Lorem Ipsum is simply dummy text.</p>
-          </div>
         </div>
         <div className="flex items-center">
           <img
-            className="md:w-[380px] md:h-[350px] w-auto h-auto"
+            className="md:w-[380px] md:h-[350px] w-auto h-60"
             src="https://template-kit.evonicmedia.com/layout43/wp-content/uploads/2023/11/header-image-1-1.png"
             alt=""
           />
@@ -78,7 +70,9 @@ const Service = () => {
 
       {/* second div */}
       <div className="flex justify-center flex-col items-center space-y-2 mt-20">
-        <h1 className="md:text-5xl text-3xl mb-5 text-orange-600">Sports Categories</h1>
+        <h1 className="md:text-5xl text-3xl mb-5 text-orange-600">
+          Sports Categories
+        </h1>
         <p className="md:w-1/2 text-center">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry’s standard dummy text ever

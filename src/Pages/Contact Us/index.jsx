@@ -8,7 +8,7 @@ const ContactUs = () => {
   return (
     <div>
       {/* contact */}
-      <div className="mx-auto max-w-7xl px-4 py-28">
+      <div className="mx-auto max-w-7xl px-4 pt-28">
         <div className="text-center text-orange-600 font-bold text-3xl md:text-5xl mb-14">
           Contact Us
         </div>
@@ -49,7 +49,7 @@ const ContactUs = () => {
                   <div className="bg-red-500 rounded-full p-2 mr-3">
                     <FiPhoneCall className="h-5 w-5 text-white" />
                   </div>
-                  <div className="text-white">+123 456 7890</div>
+                  <div className="text-white">+91 9979392775</div>
                 </div>
                 <div className="flex items-center mt-5">
                   <div className="bg-red-500 rounded-full p-2 mr-3">
@@ -84,12 +84,15 @@ const ContactUs = () => {
                 layout="vertical"
                 // onFinish={onFinish}
                 autoComplete="off"
-                className="register-form mx-auto w-60 pt-2 sm:w-96 "
+                className="register-form mx-auto max-w-96 pt-2 sm:w-96 "
               >
                 <Form.Item
                   className="text-lg font-semibold"
                   rules={[
-                    { required: true, message: "Please enter your full name" },
+                    {
+                      required: true,
+                      message: "Please enter your full name",
+                    },
                   ]}
                   name="name"
                   label={"Full Name"}

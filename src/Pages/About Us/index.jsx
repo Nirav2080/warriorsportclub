@@ -45,28 +45,29 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center py-28">
-      <div>
-        <div className="text-[66px] text-center text-orange-600 font-bold">
-          ABOUT US
-        </div>
-        <h1 className="text-9xl font-bold ">Athletic Aim</h1>
+    <div className=" pt-28">
+      <div className="md:text-6xl text-3xl text-center text-orange-600 font-bold">
+        ABOUT US
       </div>
+
       {/*First Div*/}
 
-      <div className="bg-[linear-gradient(223deg,_#262261_60%,_#e63825_100%)] w-[90%] rounded-tr-[90px] overflow-hidden">
-        <div className="flex flex-wrap justify-center z-50">
-          <img src="https://template-kit.evonicmedia.com/layout43/wp-content/uploads/2023/11/about-us-image-1-1.png" />
+      <div className="flex mx-auto bg-[linear-gradient(223deg,_#262261_60%,_#e63825_100%)] w-[90%] rounded-tr-[90px] overflow-hidden justify-center mt-10">
+        <div className="flex flex-wrap">
+          <img
+            src="https://template-kit.evonicmedia.com/layout43/wp-content/uploads/2023/11/about-us-image-1-1.png"
+            className="md:h-96 h-64"
+          />
         </div>
       </div>
 
       {/*Second Div*/}
 
-      <div className="flex flex-col  text-center m-auto w-[50%]">
+      <div className="flex flex-col text-center  m-auto w-[90%]">
         <h1 className="text-4xl mt-28 text-orange-600">
           Stay connected. Stay active. Play hard.
         </h1>
-        <p className="mt-5 text-[#60565c]">
+        <p className="mt-5 text-gray-400">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry’s standard dummy text ever
           since the 1500s, when an unknown printer took. Lorem Ipsum is simply
@@ -74,11 +75,11 @@ const AboutUs = () => {
           been the industry’s standard dummy text ever since the 1500s, when an
           unknown printer took.
         </p>
-        <div className="flex gap-5 mt-10 justify-center">
-          <button className="bg-orange-600 px-16 py-3 border border-white hover:bg-white hover:text-black duration-200">
+        <div className="flex md:flex-row flex-col gap-5 mt-10 justify-center">
+          <button className="bg-orange-600 px-16 py-3 hover:bg-white hover:text-black duration-200">
             Find Out More
           </button>
-          <button className="bg-orange-600 px-12 py-3 border border-white hover:bg-white hover:text-black duration-200">
+          <button className="bg-white px-12 py-3 text-black hover:bg-orange-600 hover:text-white duration-200">
             Become A member
           </button>
         </div>
@@ -86,8 +87,8 @@ const AboutUs = () => {
 
       {/*Third Div*/}
 
-      <div className="flex w-full  h-[300px] px-20 my-28 gap-5">
-        <div className="w-[50%] bg-white h-full rounded-md text-black">
+      <div className="flex w-full md:flex-row flex-col text-center md:h-72   md:px-16 px-8 my-28 gap-10">
+        <div className="md:w-1/2 bg-white rounded-md text-black">
           <h1 className="text-4xl font-bold px-4 mt-5">
             Our Vision About Future
           </h1>
@@ -95,14 +96,10 @@ const AboutUs = () => {
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry’s standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. <br />
-            <br /> Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry’s standard
-            dummy text ever since the 1500s, when an unknown printer took a
-            galley of type and scrambled it to make a type specimen book
+            and scrambled it to make a type specimen book.
           </p>
         </div>
-        <div className="w-[50%] bg-white h-full rounded-md text-black">
+        <div className="md:w-1/2 bg-white h-full rounded-md text-black">
           <h1 className="text-3xl font-bold px-4 mt-5">
             Best Place to Play and Create Fun
           </h1>
@@ -112,22 +109,15 @@ const AboutUs = () => {
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book.
           </p>
-
-          <div className="flex gap-5 ml-10 mt-10">
-            <i className="text-5xl fa-regular fa-square-check"></i>
-            <p>Lorem Ipsum is simply dummy text.</p>
-            <i className="text-5xl fa-regular fa-square-check"></i>
-            <p>Lorem Ipsum is simply dummy text.</p>
-          </div>
         </div>
       </div>
 
       {/*Four Div*/}
 
-      <div className="w-full flex md:flex-row flex-col container ">
+      <div className="w-full flex md:flex-row flex-col mx-auto lg:container pt-10">
         {/* Left Side */}
-        <div className="md:w-[60%] space-y-5">
-          <h3 className="text-red-700 text-xl font-bold">Why Choose Us</h3>
+        <div className="md:w-[60%] space-y-5 md:px-0 px-5 md:text-left text-center">
+          <h3 className="text-red-700 text-xl font-bold  ">Why Choose Us</h3>
           <h1 className="capitalize md:text-4xl text-3xl md:w-3/4">
             unleash your true sporting potential with our exceptional sports
             Arena
@@ -147,20 +137,24 @@ const AboutUs = () => {
                     className="hover:scale-110 transition-all duration-200 "
                   />
                 </div>
-                <h4 className="text-center text-sm mt-2"> {data.title} </h4>
+                <h4 className="text-center md:text-sm mt-2 font-semibold text-xl">
+                  {" "}
+                  {data.title}{" "}
+                </h4>
               </div>
             ))}
           </div>
 
-          <div className="flex gap-10 pb-7 md:w-[80%]">
-            <button className="bg-orange-600 md:w-1/2 lg:text-base text-sm w-fit px-6 py-3 text-white hover:bg-white hover:text-orange-600 transition-all duration-300">
+          <div className="flex md:flex-row flex-col md:gap-10 gap-3 pb-7 md:w-[80%]">
+            <button className="bg-orange-600 md:w-1/2 w-full lg:text-base text-sm  px-6 py-3 text-white hover:bg-white hover:text-orange-600 transition-all duration-300">
               Find Out More
             </button>
-            <button className="text-orange-500 md:w-1/2 lg:text-base text-sm w-fit md:px-2 px-6 py-3 bg-white hover:bg-orange-600 hover:text-white transition-all duration-300 ">
+            <button className="text-orange-500 md:w-1/2 w-full lg:text-base text-sm  md:px-2 px-6 py-3 bg-white hover:bg-orange-600 hover:text-white transition-all duration-300 ">
               Become A Member
             </button>
           </div>
         </div>
+
         {/* Right Side */}
         <div className="md:w-[40%] py-20 bg-gradient-to-t from-red-700/70 to-blue-950 h-full rounded-tl-3xl">
           <div className="w-full flex h-full ">
@@ -207,24 +201,26 @@ const AboutUs = () => {
 
       {/*Five Div*/}
 
-      <div className="w-full p-5 mt-20">
+      <div className="w-full p-5 mt-20 px-5">
         <div className="">
-          <h1 className="text-orange-600 text-4xl font-bold text-center">
+          <h1 className="text-orange-600 text-4xl font-bold text-center ">
             Our Top Trainers
           </h1>
-          <p className="w-[50%] text-center mt-5 m-auto">
+          <p className="w-[80%] text-center mt-5 m-auto">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry’s standard dummy text
             ever since the 1500s, when an unknown printer took.
           </p>
         </div>
-        <div className="flex gap-10 justify-center mt-5">
+        <div className="grid lg:grid-cols-4 grid-cols-1 lg:gap-0 md:gap-5 gap-10 mt-5 ">
           {img.map((data) => {
             return (
-              <div className="flex flex-col items-center " key={data.id}>
+              <div className="grid justify-self-center " key={data.id}>
                 <img src={data.url} />
-                <h4 className="text-2xl mt-3">{data.name}</h4>
-                <p className=" mt-2">{data.field}</p>
+                <h4 className="text-2xl mt-3 justify-self-center">
+                  {data.name}
+                </h4>
+                <p className=" mt-2 justify-self-center">{data.field}</p>
               </div>
             );
           })}
