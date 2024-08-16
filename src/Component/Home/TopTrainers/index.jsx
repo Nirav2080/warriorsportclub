@@ -5,6 +5,38 @@ import image2 from "../../../assets/Home/TopTrainers/Image2.jpg";
 import image3 from "../../../assets/Home/TopTrainers/Image3.jpg";
 import image4 from "../../../assets/Home/TopTrainers/Image4.jpg";
 
+import { motion } from "framer-motion";
+const fadeVariants = {
+  initial: {
+    opacity: 0,
+    y: 200,
+  },
+  animate: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.3 * index,
+      ease: "linear",
+      duration: 1,
+    },
+  }),
+};
+
+const HeadVariants = {
+  initial: {
+    opacity: 0,
+    x: 200,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.5,
+      ease: "easeIn",
+      duration: 0.6,
+    },
+  },
+};
 const TopTrainers = [
   {
     id: 1,
@@ -34,25 +66,45 @@ const TopTrainers = [
 
 function index() {
   return (
-    <div className="container">
-      <div className="text-center space-y-4">
-        <h1 className="md:text-4xl text-2xl font-bold text-orange-700 font-bold">Our Top Trainers</h1>
+    <div className="container mb-20 overflow-hidden">
+      <motion.div
+        variants={HeadVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        className="text-center space-y-4"
+      >
+        <h1 className="md:text-4xl text-2xl font-bold text-orange-600 ">
+          Our Top Trainers
+        </h1>
         <h3 className="md:w-3/4 w-full mx-auto md:text-lg ">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry’s standard dummy text ever
           since the 1500s, when an unknown printer took.
         </h3>
-      </div>
+      </motion.div>
 
       <div className="grid md:grid-cols-4 grid-cols-2 gap-10 mt-10">
-        {TopTrainers.map((data) => (
-          <div className="space-y-5" key={data.id}>
+        {TopTrainers.map((data, index) => (
+          <motion.div
+            variants={fadeVariants}
+            initial="initial"
+            whileInView="animate"
+            custom={index}
+            viewport={{
+              once: true,
+            }}
+            className="space-y-5"
+            key={data.id}
+          >
             <img src={data.image} alt={data.name} />
             <div className="text-center">
               <h3 className="font-bold text-2xl">{data.name}</h3>
               <p>{data.experience}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

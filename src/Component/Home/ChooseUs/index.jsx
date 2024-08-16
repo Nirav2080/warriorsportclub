@@ -7,11 +7,12 @@ import icon2 from "../../../assets/Home/ChooseUs/Icon-2.png";
 import icon3 from "../../../assets/Home/ChooseUs/Icon-3.png";
 import { AiOutlineLike } from "react-icons/ai";
 
+import { motion } from "framer-motion";
+
 import SelcetImage1 from "../../../assets/Home/ChooseUs/SelectImage-1.jpg";
 import SelcetImage2 from "../../../assets/Home/ChooseUs/SelectImage-2.jpg";
 
 import SelcetImage3 from "../../../assets/Home/ChooseUs/SelectImage-3.jpg";
-
 const IconeData = [
   {
     id: 1,
@@ -30,12 +31,68 @@ const IconeData = [
   },
 ];
 
+const fadeVariants = {
+  initial: {
+    opacity: 0,
+    x: -200,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.3,
+      ease: "easeIn",
+      duration: 0.8,
+    },
+  },
+};
+
+const titleVariants = {
+  initial: {
+    opacity: 0,
+    x: 200,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.3,
+      ease: "easeIn",
+      duration: 0.8,
+    },
+  },
+};
+
+const iconVariants = {
+  initial: {
+    opacity: 0,
+    y: 200,
+  },
+  animate: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.3 * index,
+      ease: "linear",
+      duration: 1,
+    },
+  }),
+};
+
 function index() {
   return (
-    <div className="w-full flex md:flex-row flex-col container pt-10">
+    <div className="w-full flex md:flex-row flex-col container pt-10 overflow-hidden">
       {/* Left Side */}
-      <div className="md:w-[60%] space-y-5">
-        <h3 className="text-red-700 text-xl font-bold">Why Choose Us</h3>
+      <motion.div
+        variants={fadeVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        className="md:w-[60%] space-y-5"
+      >
+        <h3 className="text-orange-600 text-xl font-bold">Why Choose Us</h3>
         <h1 className="capitalize md:text-4xl text-3xl md:w-3/4">
           unleash your true sporting potential with our exceptional sports Arena
         </h1>
@@ -45,8 +102,18 @@ function index() {
         </h1>
 
         <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 py-10 md:w-[80%] sm:w-fit">
-          {IconeData.map((data) => (
-            <div className="" key={data.id}>
+          {IconeData.map((data, index) => (
+            <motion.div
+              variants={iconVariants}
+              initial="initial"
+              whileInView="animate"
+              custom={index}
+              viewport={{
+                once: true,
+              }}
+              className=""
+              key={data.id}
+            >
               <div className="bg-red-200 flex justify-center py-3 rounded-tr-3xl">
                 <img
                   src={data.icon}
@@ -54,8 +121,11 @@ function index() {
                   className="hover:scale-110 transition-all duration-200 "
                 />
               </div>
-              <h4 className="text-center md:text-sm mt-2 font-semibold text-xl"> {data.title} </h4>
-            </div>
+              <h4 className="text-center md:text-sm mt-2 font-semibold text-xl">
+                {" "}
+                {data.title}{" "}
+              </h4>
+            </motion.div>
           ))}
         </div>
 
@@ -67,9 +137,17 @@ function index() {
             Become A Member
           </button>
         </div>
-      </div>
+      </motion.div>
       {/* Right Side */}
-      <div className="md:w-[40%] py-20 bg-gradient-to-t from-red-700/70 to-blue-950 h-full rounded-tl-3xl">
+      <motion.div
+        variants={titleVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        className="md:w-[40%] py-20 bg-gradient-to-t from-red-700/70 to-blue-950 h-full rounded-tl-3xl"
+      >
         <div className="w-full flex h-full ">
           <div className="w-[70%] h-full relative -left-5">
             <div className="">
@@ -109,7 +187,7 @@ function index() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

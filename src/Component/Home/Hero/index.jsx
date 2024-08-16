@@ -1,26 +1,76 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import { easeIn } from "framer-motion/dom";
 import bgImage from "../../../assets/Home/Hero/HeroBGBackground.png";
 import runImage from "../../../assets/Home/Hero/running.png";
 import Counter from "../../Common/Counter/Counter";
+
+import { motion } from "framer-motion";
+const fadeVariants = {
+  initial: {
+    opacity: 0,
+    x: -200,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.3,
+      ease: "easeIn",
+      duration: 0.8,
+    },
+  },
+};
+
+const titleVariants = {
+  initial: {
+    opacity: 0,
+    x: 200,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.3,
+      ease: "easeIn",
+      duration: 0.8,
+    },
+  },
+};
 
 const countersData = [{ countTo: 100, duration: 1000 }];
 
 const HeroSection = () => {
   return (
-    <main className="max-h-screen w-full  mx-auto  flex items-center container lg:pt-40 pt-56">
+    <main className="max-h-screen w-full  mx-auto  flex items-center container lg:pt-40 pt-56 overflow-hidden">
       <div className="flex flex-col lg:flex-row items-center w-full gap-10">
         {/* Left Side */}
-        <div className="lg:w-1/2 w-full text-center lg:text-left">
+        <motion.div
+          variants={fadeVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{
+            once: true,
+          }}
+          className="lg:w-1/2 w-full text-center lg:text-left"
+        >
           <HeaderContent />
           <Description />
           <GetStartedButton />
-        </div>
+        </motion.div>
 
         {/* Right Side */}
-        <div className="relative w-full lg:w-1/2 h-80 lg:h-auto bg-gradient-to-tr from-red-700/70 to-blue-950 rounded-tr-[50px] md:rounded-tr-[100px] flex items-center justify-center">
+        <motion.div
+          variants={titleVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{
+            once: true,
+          }}
+          className="relative w-full lg:w-1/2 h-80 lg:h-auto bg-gradient-to-tr from-red-700/70 to-blue-950 rounded-tr-[50px] md:rounded-tr-[100px] flex items-center justify-center"
+        >
           <HeroImages />
-        </div>
+        </motion.div>
       </div>
     </main>
   );

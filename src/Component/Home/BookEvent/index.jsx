@@ -2,15 +2,37 @@
 import React from "react";
 import BasketBall from "../../../assets/Home/Event/BasketBall-ManImage.png";
 import eventImage from "../../../assets/Home/Event/Event_image.png";
-import SetImage1 from "../../../assets/Home/Event/SetImage1.jpg";
-import SetImage2 from "../../../assets/Home/Event/SetImage2.jpg";
-import SetImage3 from "../../../assets/Home/Event/SetImage3.jpg";
+
+import { motion } from "framer-motion";
+const fadeVariants = {
+  initial: {
+    opacity: 0,
+    x: -200,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.5,
+      ease: "easeIn",
+      duration: 0.8,
+    },
+  },
+};
 
 function Index() {
   return (
     <div className="my-20 md:px-12">
       {/* Event Section */}
-      <div className="bg-[#262261] mx-auto w-[90%] py-10 px-5 flex flex-col md:flex-row gap-10 mb-20">
+      <motion.div
+        variants={fadeVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        className="bg-[#262261] mx-auto w-[90%] py-10 px-5 flex flex-col md:flex-row gap-10 mb-20 overflow-hidden"
+      >
         {/* Left Side */}
         <div className="flex flex-col md:flex-row md:w-[40%] gap-4 md:items-center">
           {/* Image Part */}
@@ -51,56 +73,9 @@ function Index() {
             &gt;
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Next Section */}
-      <div className=" px-9 w-[100%]">
-        <div className="flex flex-col  lg:flex-row gap-10 mt-10">
-          {/* Image Section */}
-          <div className="flex w-full lg:w-1/2 text-center gap-5 md:h-[350px] ">
-            <div className="flex flex-col gap-5 w-[30%] h-full">
-              <img
-                src={SetImage1}
-                alt="SetImage1"
-                className="h-full object-cover rounded-lg"
-              />
-              <img
-                src={SetImage2}
-                alt="SetImage2"
-                className="h-full object-cover rounded-lg"
-              />
-            </div>
-            <div className="md:w-[100%] w-[65%] h-full">
-              <img
-                src={SetImage3}
-                alt="SetImage3"
-                className="h-full object-cover rounded-lg"
-              />
-            </div>
-          </div>
-
-          {/* Text Section */}
-          <div className="flex flex-col justify-center lg:w-1/2 space-y-4">
-            <div className="text-3xl md:text-5xl font-bold">
-              Stay connected. Stay active. Play hard.
-            </div>
-            <p className="text-gray-400">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s, when an unknown printer took. Lorem
-              Ipsum is simply dummy text of the printing.
-            </p>
-            <div className="flex flex-col md:flex-row gap-5">
-              <button className="bg-orange-600 w-full md:w-1/2 px-6 py-3 text-white hover:bg-white hover:text-orange-600 transition-all duration-300">
-                Find Out More
-              </button>
-              <button className="text-orange-500 w-full md:w-1/2 px-6 py-3 bg-white hover:bg-orange-600 hover:text-white transition-all duration-300">
-                Become A Member
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

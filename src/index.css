@@ -11,6 +11,9 @@
     background-color: azure;
     color: white  !important;
 } */
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Poppins", sans-serif;

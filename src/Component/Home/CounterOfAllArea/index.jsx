@@ -5,6 +5,38 @@ import { GoTrophy } from "react-icons/go";
 import { IoManOutline } from "react-icons/io5";
 import { LuMedal } from "react-icons/lu";
 import Counter from "../../Common/Counter/Counter";
+import { motion } from "framer-motion";
+const HeadingVariants = {
+  initial: {
+    opacity: 0,
+    x: 200,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.5,
+      ease: "easeIn",
+      duration: 0.6,
+    },
+  },
+};
+
+const fadeVariants = {
+  initial: {
+    opacity: 0,
+    x: -200,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.5,
+      ease: "easeIn",
+      duration: 0.8,
+    },
+  },
+};
 
 const MainData = [
   {
@@ -58,16 +90,34 @@ const countersData = [
 
 function Index() {
   return (
-    <div className="container my-28">
-      <h1 className="text-center md:text-4xl text-2xl text-orange-700 font-bold capitalize">
-        our sports arena in just numbers
-      </h1>
-      <p className="text-center">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry.
-      </p>
+    <main className="container my-28 overflow-hidden">
+      <motion.div
+        variants={HeadingVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        className=""
+      >
+        <h1 className="text-center md:text-4xl text-2xl text-orange-600 font-bold capitalize">
+          our sports arena in just numbers
+        </h1>
+        <p className="text-center">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </p>
+      </motion.div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 my-10 lg:gap-0 gap-4">
+      <motion.div
+        variants={fadeVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        className="grid grid-cols-2 lg:grid-cols-4 my-10 lg:gap-0 gap-4"
+      >
         {MainData.map((data) => {
           const counter = countersData.find(
             (counter) => counter.id === data.id
@@ -77,7 +127,7 @@ function Index() {
               className="flex md:gap-10 gap-5 lg:justify-center items-center w-full mx-auto border-r-4 md:px-3 pr-3"
               key={data.id}
             >
-              {data.icon}
+              <h1>{data.icon}</h1>
               <div>
                 <h1 className="md:text-xl text-lg font-semibold md:font-bold flex gap-2">
                   <Counter
@@ -91,8 +141,8 @@ function Index() {
             </div>
           );
         })}
-      </div>
-    </div>
+      </motion.div>
+    </main>
   );
 }
 
