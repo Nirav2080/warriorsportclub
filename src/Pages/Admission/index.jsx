@@ -1,22 +1,69 @@
 import { Button, Form } from "antd";
 import { FormInput, FormSelect } from "../../Component/Common/Form";
+import { motion } from "framer-motion";
+const fadeVariants = {
+  initial: {
+    opacity: 0,
+    x: -200,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.6,
+      ease: "easeIn",
+      duration: 0.8,
+    },
+  },
+};
+
+
+const HeadingVariants = {
+  initial: {
+    opacity: 0,
+    x: 200,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.6,
+      ease: "easeIn",
+      duration: 0.8,
+    },
+  },
+};
 
 const Admission = () => {
   return (
-    <div className="pt-28 ">
-      <div>
+    <main className="pt-28 overflow-hidden">
+      <motion.div
+        variants={HeadingVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}>
         <h1 className="text-3xl md:text-6xl font-bold text-center text-orange-600 mb-6">
           ADMISSION ENQUIRY
         </h1>
-      </div>
+      </motion.div>
       {/*Form Div*/}
-      <div className=" mx-auto h-full min-h-[90vh] w-full bg-Gray-200 p-4 sm:box-border sm:flex sm:h-screen sm:w-[50%] sm:flex-col items-center sm:justify-center">
+      <motion.div
+        variants={fadeVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        className=" mx-auto  h-full  w-full bg-Gray-200 p-4 sm:box-border sm:flex  sm:w-[50%] sm:flex-col items-center sm:justify-center"
+      >
         <Form
           name="basic"
           layout="vertical"
           // onFinish={onFinish}
           autoComplete="off"
-          className="register-form mx-auto max-w-96 pt-2 sm:w-96 "
+          className=" mx-auto max-w-96  sm:w-96 h-full "
         >
           <Form.Item
             className="pb-2 text-lg font-semibold"
@@ -111,15 +158,15 @@ const Admission = () => {
 
           <Button
             type="primary"
-            className="mt-4 h-10 w-full font-bold text-xl bg-transparent border border-gray-200 text-orange-600 hover:text-white hover:bg-orange-600"
+            className="mt-4 h-10 w-full font-bold text-xl bg-transparent border border-gray-200 text-orange-600 hover:text-white hover:bg-orange-600 "
             htmlType="submit"
             // loading={isPending}
           >
             Sign Up
           </Button>
         </Form>
-      </div>
-    </div>
+      </motion.div>
+    </main>
   );
 };
 

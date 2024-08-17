@@ -1,8 +1,4 @@
 import { AiOutlineLike } from "react-icons/ai";
-import team1 from "../../assets/Aboutus/team-1-1.jpg";
-import team2 from "../../assets/Aboutus/team-2-1.jpg";
-import team3 from "../../assets/Aboutus/team-3-1.jpg";
-import team4 from "../../assets/Aboutus/team-4-1.jpg";
 
 import icon1 from "../../assets/Home/ChooseUs/Icon-1.png";
 import icon2 from "../../assets/Home/ChooseUs/Icon-2.png";
@@ -12,12 +8,96 @@ import SelcetImage1 from "../../assets/Home/ChooseUs/SelectImage-1.jpg";
 import SelcetImage2 from "../../assets/Home/ChooseUs/SelectImage-2.jpg";
 
 import SelcetImage3 from "../../assets/Home/ChooseUs/SelectImage-3.jpg";
+import { motion } from "framer-motion";
 
-
+import image1 from "../../assets/Home/TopTrainers/Image1.jpg";
+import image2 from "../../assets/Home/TopTrainers/Image2.jpg";
+import image3 from "../../assets/Home/TopTrainers/Image3.jpg";
+import image4 from "../../assets/Home/TopTrainers/Image4.jpg";
 // import SetImage1 from '../../assets/Home/'
 import SetImage1 from "../../assets/Home/Event/SetImage1.jpg";
 import SetImage2 from "../../assets/Home/Event/SetImage2.jpg";
 import SetImage3 from "../../assets/Home/Event/SetImage3.jpg";
+
+const titleVariants = {
+  initial: {
+    opacity: 0,
+    y: 200,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.6,
+      ease: "easeIn",
+      duration: 0.8,
+    },
+  },
+};
+
+const HeadingVariants = {
+  initial: {
+    opacity: 0,
+    x: 200,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.6,
+      ease: "easeIn",
+      duration: 0.8,
+    },
+  },
+};
+
+const iconVariants = {
+  initial: {
+    opacity: 0,
+    y: 200,
+  },
+  animate: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.3 * index,
+      ease: "linear",
+      duration: 1,
+    },
+  }),
+};
+
+const fadeVariants = {
+  initial: {
+    opacity: 0,
+    x: -200,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.6,
+      ease: "easeIn",
+      duration: 0.8,
+    },
+  },
+};
+
+const fadeVariants2 = {
+  initial: {
+    opacity: 0,
+    x: -200,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.6,
+      ease: "easeIn",
+      duration: 0.8,
+    },
+  },
+};
 
 const IconeData = [
   {
@@ -37,42 +117,81 @@ const IconeData = [
   },
 ];
 
-const AboutUs = () => {
-  const img = [
-    { id: "0", url: team1, name: "Ben Nebert", fild: "Baseball Trainer" },
-    {
-      id: "1",
-      url: team2,
-      name: "Pieter Noël",
-      field: "Professional Rugby Coach",
-    },
-    { id: "2", url: team3, name: "Thomas Stanley", field: "Hockey Trainer" },
-    { id: "3", url: team4, name: "Raymond Little", field: "Tennis Coach" },
-  ];
+const TopTrainers = [
+  {
+    id: 1,
+    name: "Ben Nebert",
+    image: image1,
+    experience: "Baseball Trainer",
+  },
+  {
+    id: 2,
+    name: "Ben Nebert",
+    image: image2,
+    experience: "Baseball Trainer",
+  },
+  {
+    id: 3,
+    name: "Ben Nebert",
+    image: image3,
+    experience: "Baseball Trainer",
+  },
+  {
+    id: 4,
+    name: "Ben Nebert",
+    image: image4,
+    experience: "Baseball Trainer",
+  },
+];
 
+const AboutUs = () => {
   return (
-    <div className=" pt-28">
-      <div className="md:text-6xl text-3xl text-center text-orange-600 font-bold">
+    <main className=" pt-28 overflow-hidden">
+      <motion.div
+        variants={HeadingVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        className="md:text-6xl text-3xl text-center text-orange-600 font-bold"
+      >
         ABOUT US
-      </div>
+      </motion.div>
 
       {/*First Div*/}
 
-      <div className="flex mx-auto bg-[linear-gradient(223deg,_#262261_60%,_#e63825_100%)] w-[90%] rounded-tr-[90px] overflow-hidden justify-center mt-10">
+      <motion.div
+        variants={fadeVariants2}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        className="flex mx-auto bg-[linear-gradient(223deg,_#262261_60%,_#e63825_100%)] w-[90%] rounded-tr-[90px] overflow-hidden justify-center mt-10"
+      >
         <div className="flex flex-wrap">
           <img
             src="https://template-kit.evonicmedia.com/layout43/wp-content/uploads/2023/11/about-us-image-1-1.png"
-            className="md:h-96 h-64"
+            className="md:h-96 h-64 hover:scale-125  transition-all duration-700"
           />
         </div>
-      </div>
+      </motion.div>
 
       {/*Second Div*/}
 
       <div className="flex flex-col text-center  m-auto w-[90%]">
-        <h1 className="text-4xl mt-28 text-orange-600">
+        <motion.div
+          variants={HeadingVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{
+            once: true,
+          }}
+          className="text-4xl mt-28 text-orange-600"
+        >
           Stay connected. Stay active. Play hard.
-        </h1>
+        </motion.div>
         <p className="mt-5 text-gray-400">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry’s standard dummy text ever
@@ -95,9 +214,17 @@ const AboutUs = () => {
 
       <div className="flex w-full md:flex-row flex-col text-center md:h-72   md:px-16 px-8 my-28 gap-10">
         <div className="md:w-1/2 bg-white rounded-md text-black">
-          <h1 className="text-4xl font-bold px-4 mt-5">
+          <motion.div
+            variants={titleVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            className="text-4xl font-bold px-4 mt-5"
+          >
             Our Vision About Future
-          </h1>
+          </motion.div>
           <p className="p-5">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry’s standard dummy text
@@ -106,9 +233,17 @@ const AboutUs = () => {
           </p>
         </div>
         <div className="md:w-1/2 bg-white h-full rounded-md text-black">
-          <h1 className="text-3xl font-bold px-4 mt-5">
+          <motion.div
+            variants={titleVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            className="text-3xl font-bold px-4 mt-5"
+          >
             Best Place to Play and Create Fun
-          </h1>
+          </motion.div>
           <p className="p-5">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry’s standard dummy text
@@ -120,10 +255,18 @@ const AboutUs = () => {
 
       {/*Four Div*/}
 
-      <div className="w-full flex md:flex-row flex-col mx-auto lg:container pt-10">
+      <div className="w-full flex md:flex-row flex-col container pt-10 overflow-hidden">
         {/* Left Side */}
-        <div className="md:w-[60%] space-y-5 md:px-0 px-5 md:text-left text-center">
-          <h3 className="text-red-700 text-xl font-bold  ">Why Choose Us</h3>
+        <motion.div
+          variants={fadeVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{
+            once: true,
+          }}
+          className="md:w-[60%] space-y-5"
+        >
+          <h3 className="text-orange-600 text-xl font-bold">Why Choose Us</h3>
           <h1 className="capitalize md:text-4xl text-3xl md:w-3/4">
             unleash your true sporting potential with our exceptional sports
             Arena
@@ -134,8 +277,18 @@ const AboutUs = () => {
           </h1>
 
           <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 py-10 md:w-[80%] sm:w-fit">
-            {IconeData.map((data) => (
-              <div className="" key={data.id}>
+            {IconeData.map((data, index) => (
+              <motion.div
+                variants={iconVariants}
+                initial="initial"
+                whileInView="animate"
+                custom={index}
+                viewport={{
+                  once: true,
+                }}
+                className=""
+                key={data.id}
+              >
                 <div className="bg-red-200 flex justify-center py-3 rounded-tr-3xl">
                   <img
                     src={data.icon}
@@ -147,22 +300,29 @@ const AboutUs = () => {
                   {" "}
                   {data.title}{" "}
                 </h4>
-              </div>
+              </motion.div>
             ))}
           </div>
 
-          <div className="flex md:flex-row flex-col md:gap-10 gap-3 pb-7 md:w-[80%]">
-            <button className="bg-orange-600 md:w-1/2 w-full lg:text-base text-sm  px-6 py-3 text-white hover:bg-white hover:text-orange-600 transition-all duration-300">
+          <div className="flex md:flex-row f md:gap-10 gap-3 pb-7 md:w-[80%]">
+            <button className="bg-orange-600 md:w-1/2 w-fit lg:text-base text-sm  px-6 py-3 text-white hover:bg-white hover:text-orange-600 transition-all duration-300">
               Find Out More
             </button>
-            <button className="text-orange-500 md:w-1/2 w-full lg:text-base text-sm  md:px-2 px-6 py-3 bg-white hover:bg-orange-600 hover:text-white transition-all duration-300 ">
+            <button className="text-orange-500 md:w-1/2 w-fit lg:text-base text-sm  md:px-2 px-6 py-3 bg-white hover:bg-orange-600 hover:text-white transition-all duration-300 ">
               Become A Member
             </button>
           </div>
-        </div>
-
+        </motion.div>
         {/* Right Side */}
-        <div className="md:w-[40%] py-20 bg-gradient-to-t from-red-700/70 to-blue-950 h-full rounded-tl-3xl">
+        <motion.div
+          variants={HeadingVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{
+            once: true,
+          }}
+          className="md:w-[40%] py-20 bg-gradient-to-t from-red-700/70 to-blue-950 h-full rounded-tl-3xl"
+        >
           <div className="w-full flex h-full ">
             <div className="w-[70%] h-full relative -left-5">
               <div className="">
@@ -202,12 +362,20 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       {/* Six div */}
-      <div className=" px-9 my-20 mt-32 w-[100%]">
+      <div className=" px-9 my-20 mt-32 w-[100%] overflow-hidden">
         <div className="flex flex-col  lg:flex-row gap-10 mt-10">
-          <div className="flex w-full lg:w-1/2 text-center gap-5 md:h-[350px] ">
+          <motion.div
+            variants={fadeVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            className="flex w-full lg:w-1/2 text-center gap-5 md:h-[350px] "
+          >
             <div className="flex flex-col gap-5 w-[30%] h-full">
               <img
                 src={SetImage1}
@@ -227,9 +395,17 @@ const AboutUs = () => {
                 className="h-full object-cover rounded-lg"
               />
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col justify-center lg:w-1/2 space-y-4">
+          <motion.div
+            variants={HeadingVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            className="flex flex-col justify-center lg:w-1/2 space-y-4"
+          >
             <div className="text-3xl md:text-5xl font-bold">
               Stay connected. Stay active. Play hard.
             </div>
@@ -247,37 +423,54 @@ const AboutUs = () => {
                 Become A Member
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-      {/*Five Div*/}
+      {/*seven Div*/}
 
-      <div className="w-full p-5 mt-20 px-5">
-        <div className="">
-          <h1 className="text-orange-600 text-4xl font-bold text-center ">
+      <div className="container mb-20 overflow-hidden">
+        <motion.div
+          variants={HeadingVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{
+            once: true,
+          }}
+          className="text-center space-y-4"
+        >
+          <h1 className="md:text-4xl text-2xl font-bold text-orange-600 ">
             Our Top Trainers
           </h1>
-          <p className="w-[80%] text-center mt-5 m-auto">
+          <h3 className="md:w-3/4 w-full mx-auto md:text-lg ">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry’s standard dummy text
             ever since the 1500s, when an unknown printer took.
-          </p>
-        </div>
-        <div className="grid lg:grid-cols-4 grid-cols-1 lg:gap-0 md:gap-5 gap-10 mt-5 ">
-          {img.map((data) => {
-            return (
-              <div className="grid justify-self-center " key={data.id}>
-                <img src={data.url} />
-                <h4 className="text-2xl mt-3 justify-self-center">
-                  {data.name}
-                </h4>
-                <p className=" mt-2 justify-self-center">{data.field}</p>
+          </h3>
+        </motion.div>
+
+        <div className="grid md:grid-cols-4 grid-cols-2 gap-10 mt-10">
+          {TopTrainers.map((data, index) => (
+              <motion.div
+                variants={iconVariants}
+                initial="initial"
+                whileInView="animate"
+                custom={index}
+                viewport={{
+                  once: true,
+                }}
+              className="space-y-5"
+              key={data.id}
+            >
+              <img src={data.image} alt={data.name} />
+              <div className="text-center">
+                <h3 className="font-bold text-2xl">{data.name}</h3>
+                <p>{data.experience}</p>
               </div>
-            );
-          })}
+            </motion.div>
+          ))}
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 export default AboutUs;

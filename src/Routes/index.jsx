@@ -8,19 +8,21 @@ import Admission from "../Pages/Admission";
 import ContactUs from "../Pages/Contact Us";
 import Gallery from "../Pages/Gallery";
 import Service from "../Pages/Service";
+import ScrollToTop from "./ScrollToTop";
 
 const AppRoutes = () => {
   return (
     <main className="bg-neutral-950 text-white  ">
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/About" element={<AboutUs />} />
-        <Route path="/Service" element={<Service />} />
-        <Route path="/Achievers" element={<Achievers />} />
-        <Route path="/Gallery" element={<Gallery />} />
-        <Route path="/Admission" element={<Admission />} />
-        <Route path="/Contact" element={<ContactUs />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/service" element={<Service />} />
+        <Route path="/achievers" element={<Achievers />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/admission" element={<Admission />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
       <Footer />
     </main>

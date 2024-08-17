@@ -44,7 +44,9 @@ export default function Footer() {
           whileInView="animate"
           viewport={{
             once: true,
-          }} className="">
+          }}
+          className=""
+        >
           <Row gutter={[16, 16]}>
             <Col lg={8} span={24}>
               <div className="pt-5 text-center md:text-start">
@@ -83,21 +85,22 @@ export default function Footer() {
                       to="https://maps.app.goo.gl/TKWf7JvD6T2d9hfw7"
                       target="_blank"
                     >
-                      308 3rd Floor Pearl Plaza Nr Maharshi Sandipani School
-                      Haridarshan Cross, Road, Naroda, Ahmedabad, Gujarat 382330
+                      B-503, Divyajivan Elegance, Nikol Gam Rd, opp. Vrundavan
+                      Farm, Nikol, Ahmedabad, Gujarat
+                      382350
                     </Link>
                   </div>
 
                   <div className="flex items-center gap-2">
                     <CiMobile3 className="w-10" />
-                    <Link to="tel:+919979392775" target="_blank">
-                      +91 9979392775
+                    <Link to="tel:+918866187676" target="_blank">
+                      +91 8866187676
                     </Link>
                   </div>
 
                   <div className="flex items-center gap-2">
                     <CiMail className="w-10" />
-                    <Link target="_blank" to="mailto:fameadda18@gmail.com">
+                    <Link target="_blank" to="mailto:shashwatchovatiya316@gmail.com">
                       abc@gmail.com
                     </Link>
                   </div>
