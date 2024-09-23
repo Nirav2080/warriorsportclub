@@ -167,3 +167,9 @@ body {
   background-color: rgb(234, 88, 12) !important;
   color: white;
 }
+.icon-game-category {
+  text-align: -webkit-center;
+}
+.circle-service {
+  text-align: -webkit-center;
+}

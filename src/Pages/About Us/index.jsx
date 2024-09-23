@@ -6,8 +6,11 @@ import icon3 from "../../assets/Home/ChooseUs/Icon-3.png";
 
 import SelcetImage1 from "../../assets/Home/ChooseUs/SelectImage-1.jpg";
 import SelcetImage2 from "../../assets/Home/ChooseUs/SelectImage-2.jpg";
-
 import SelcetImage3 from "../../assets/Home/ChooseUs/SelectImage-3.jpg";
+
+import ServiceImage1 from "../../assets/Services/Map.svg";
+import ServiceImage2 from "../../assets/Services/Taekwondo sevices.png";
+
 import { motion } from "framer-motion";
 
 import image1 from "../../assets/Home/TopTrainers/Image1.jpg";
@@ -168,13 +171,70 @@ const AboutUs = () => {
         viewport={{
           once: true,
         }}
-        className="flex mx-auto bg-[linear-gradient(223deg,_#262261_60%,_#e63825_100%)] w-[90%] rounded-tr-[90px] overflow-hidden justify-center mt-10"
+        className="flex mx-auto  w-[90%] rounded-tr-[90px] overflow-hidden justify-center  "
       >
-        <div className="flex flex-wrap">
-          <img
-            src="https://template-kit.evonicmedia.com/layout43/wp-content/uploads/2023/11/about-us-image-1-1.png"
-            className="md:h-96 h-64 hover:scale-125  transition-all duration-700"
-          />
+        <div className="md:flex flex-row mt-20  container gap-20 md:gap-0 ">
+          <div className="md:w-1/3">
+            <p className="text-4xl text-center font-bold text-orange-600 ">
+              Warriors Sports Club
+            </p>
+            <img src={ServiceImage1} alt="" className="h-64 w-full mt-14" />
+          </div>
+
+          {/* Image of the player */}
+          <div className="relative md:w-1/3 text-white flex md:items-center md:justify-center mt-10">
+            <div className="relative">
+              <div className="flex items-center justify-center">
+                <img
+                  src={ServiceImage2}
+                  alt="Player silhouette"
+                  className="md:h-96 h-64"
+                />
+              </div>
+
+              {/* Founder Section */}
+              <div className="absolute top-16 left-20">
+                <div className="flex items-center mb-2">
+                  <p className="md:ml-40 ml-28 md:mt-10 text-l font-normal">
+                    Founder: Harshal Sir
+                  </p>
+                </div>
+                <div className=" h-1 bg-orange-500 md:ml-20 ml-8 w-[250px]"></div>
+              </div>
+
+              {/* Co-Founder Section */}
+              {/* <div className="absolute top-40 left-20">
+              <div className="flex items-center mb-2">
+                <p className="ml-2 text-xl font-semibold">
+                  Co-Founder: Roshan Pole
+                </p>
+              </div>
+              <div className="w-32 h-1 bg-orange-500"></div>
+            </div> */}
+            </div>
+          </div>
+
+          <div className="md:w-1/3 flex flex-col mt-10">
+            <div className="md:self-center self-start">
+              <p className="text-center">Happy Student:</p>
+              <div className=" bg-white border-4 border-gray-500 rounded-full md:h-40 md:w-40 h-48 w-48 flex items-center justify-center text-orange-600 font-bold text-3xl">
+                3000+
+              </div>
+            </div>
+
+            <div className="self-end">
+              <p className="text-center">Coaches:</p>
+              <div className=" bg-white border-4 border-gray-500 rounded-full md:h-24 md:w-24 w-36 h-36 flex items-center justify-center text-orange-600 font-bold text-3xl">
+                85+
+              </div>
+            </div>
+            <div className="self-center">
+              <p className="text-center">Experience:</p>
+              <div className=" bg-white border-4 border-gray-500 rounded-full md:h-24 md:w-24 w-28 h-28 flex items-center justify-center text-orange-600 font-bold text-3xl">
+                6+ y.
+              </div>
+            </div>
+          </div>
         </div>
       </motion.div>
 
@@ -450,14 +510,14 @@ const AboutUs = () => {
 
         <div className="grid md:grid-cols-4 grid-cols-2 gap-10 mt-10">
           {TopTrainers.map((data, index) => (
-              <motion.div
-                variants={iconVariants}
-                initial="initial"
-                whileInView="animate"
-                custom={index}
-                viewport={{
-                  once: true,
-                }}
+            <motion.div
+              variants={iconVariants}
+              initial="initial"
+              whileInView="animate"
+              custom={index}
+              viewport={{
+                once: true,
+              }}
               className="space-y-5"
               key={data.id}
             >
