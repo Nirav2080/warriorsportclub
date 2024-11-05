@@ -40,35 +40,35 @@ const App = () => {
         "John has written several bestsellers and won multiple literary awards for his work.",
     },
     {
-      image: "https://via.placeholder.com/300",
+      image: Image1,
       name: "Jane Smith",
       achievement: "Top Scientist",
       description:
         "Jane is known for her breakthrough research in renewable energy.",
     },
     {
-      image: "https://via.placeholder.com/300",
+      image: Image1,
       name: "Emily Johnson",
       achievement: "Entrepreneur of the Year",
       description:
         "Emily founded a successful tech startup that helps companies grow their online presence.",
     },
     {
-      image: "https://via.placeholder.com/300",
+      image: Image1,
       name: "Emily Johnson",
       achievement: "Entrepreneur of the Year",
       description:
         "Emily founded a successful tech startup that helps companies grow their online presence.",
     },
     {
-      image: "https://via.placeholder.com/300",
+      image: Image1,
       name: "Emily Johnson",
       achievement: "Entrepreneur of the Year",
       description:
         "Emily founded a successful tech startup that helps companies grow their online presence.",
     },
     {
-      image: "https://via.placeholder.com/300",
+      image: Image1,
       name: "Emily Johnson",
       achievement: "Entrepreneur of the Year",
       description:
