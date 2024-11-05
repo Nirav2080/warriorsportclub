@@ -4,6 +4,7 @@ import BasketBall from "../../../assets/Home/Event/BasketBall-ManImage.png";
 import eventImage from "../../../assets/Home/Event/Event_image.png";
 
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 const fadeVariants = {
   initial: {
     opacity: 0,
@@ -21,6 +22,14 @@ const fadeVariants = {
 };
 
 function Index() {
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    navigate("/admission");
+  };
+
+  console.log(handleNavigation);
+
   return (
     <div className="my-20 md:px-12">
       {/* Event Section */}
@@ -45,7 +54,12 @@ function Index() {
               <div>Brilliant Sports Club</div>
               <span>Amenities</span>
             </div>
-            <div className="text-red-200 cursor-pointer">&gt; Book A Tour </div>
+            <button
+              className="text-red-200 cursor-pointer"
+              onClick={handleNavigation}
+            >
+              &gt; Book A Tour
+            </button>
           </div>
         </div>
 

@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import { easeIn } from "framer-motion/dom";
 import bgImage from "../../../assets/Home/Hero/HeroBGBackground.png";
 import runImage from "../../../assets/Home/Hero/running.png";
 import Counter from "../../Common/Counter/Counter";
 
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 const fadeVariants = {
   initial: {
     opacity: 0,
@@ -96,17 +96,25 @@ const Description = () => (
   </p>
 );
 
-const GetStartedButton = () => (
-  <div>
-    <button
-      className="mt-4 w-fit border border-white py-2 px-4 md:px-6 text-sm md:text-base hover:bg-orange-600 hover:text-white transition-all duration-300 hover:border-orange-500 md:mb-0 mb-14"
-      type="button"
-    >
-      Get Started
-    </button>
-  </div>
-);
+const GetStartedButton = () => {
+  const navigate = useNavigate();
 
+  const handleNavigation = () => {
+    navigate("/");
+  };
+  console.log(handleNavigation);
+  return (
+    <div>
+      <button
+        className="mt-4 w-fit border border-white py-2 px-4 md:px-6 text-sm md:text-base hover:bg-orange-600 hover:text-white transition-all duration-300 hover:border-orange-500 md:mb-0 mb-14"
+        type="button"
+        onClick={handleNavigation}
+      >
+        Get Started
+      </button>
+    </div>
+  );
+};
 const HeroImages = () => (
   <div className="relative flex items-center justify-center h-full w-full">
     <img
