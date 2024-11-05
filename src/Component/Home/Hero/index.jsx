@@ -42,7 +42,7 @@ const countersData = [{ countTo: 100, duration: 1000 }];
 
 const HeroSection = () => {
   return (
-    <main className="max-h-screen w-full  mx-auto  flex items-center container lg:pt-40 pt-56 overflow-hidden">
+    <main className="max-h-screen w-full  mx-auto  flex items-center container lg:pt-48 pt-56 overflow-hidden">
       <div className="flex flex-col lg:flex-row items-center w-full gap-10">
         {/* Left Side */}
         <motion.div
