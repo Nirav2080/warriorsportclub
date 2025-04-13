@@ -148,7 +148,7 @@ export default function Footer() {
                     <h1 className="pb-12 text-2xl font-bold"> Follow</h1>
                     <ul className="flex flex-col space-y-5">
                       <Link
-                        to="https://www.instagram.com/shashwat_0046"
+                        to="https://www.instagram.com/warriors_sports_club_?igsh=NDM0cmt0Y25hdGVp"
                         target="_blank"
                         className="flex space-y-5"
                       >

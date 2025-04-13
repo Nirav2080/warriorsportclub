@@ -163,7 +163,7 @@ const Gallery = () => {
               <img
                 src={data.image}
                 alt={data.title}
-                className="w-full h-[100px] object-fill rounded-md cursor-pointer"
+                className="w-full lg:h-[100px] h-[60px] object-fill rounded-md cursor-pointer"
               />
             </SwiperSlide>
           ))}
