@@ -127,7 +127,7 @@ const Gallery = () => {
       </div>
 
       {/* Swiper Gallery */}
-      <div className="w-[50%] mx-auto mt-20">
+      <div className="lg:w-[50%] w-[90%] mx-auto mt-20">
         {/* Main Swiper */}
         <Swiper
           style={{ width: "100%", height: "auto" }}
