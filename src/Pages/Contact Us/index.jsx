@@ -226,13 +226,15 @@
 // };
 // export default ContactUs;
 
-import { useState } from "react";
-import axios from "axios";
 import { Button, Form } from "antd";
+import axios from "axios";
+import { motion } from "framer-motion";
+import { useState } from "react";
 import { FiPhoneCall } from "react-icons/fi";
 import { GrMapLocation } from "react-icons/gr";
 import { MdMoreTime, MdOutlineMarkEmailRead } from "react-icons/md";
-import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 // import { FormInput } from "../../Component/Common/Form";
 
 const ContactUs = () => {
@@ -379,30 +381,44 @@ const ContactUs = () => {
                     <GrMapLocation className="h-5 w-5 text-white" />
                   </div>
                   <div className="text-white">
-                    308 3rd Floor Pearl Plaza Nr Maharshi Sandipani School
-                    Haridarshan Cross, Road, Naroda, Ahmedabad, Gujarat 382330
+                    <Link
+                      to="https://www.google.co.in/maps/place/Warriors+Sports+Club/@23.0718038,72.6731589,17z/data=!3m2!4b1!5s0x395e873261848589:0x3c76073c27bd3504!4m6!3m5!1s0x395e87b72003a5e1:0x10535b813adc4e38!8m2!3d23.0718038!4d72.6757338!16s%2Fg%2F11rpkyd258?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                    >
+                      308 3rd Floor Pearl Plaza Nr Maharshi Sandipani School
+                      Haridarshan Cross, Road, Naroda, Ahmedabad, Gujarat 382330
+                    </Link>
                   </div>
                 </div>
                 <div className="flex items-center mt-5">
                   <div className="bg-red-500 rounded-full p-2 mr-3">
                     <MdOutlineMarkEmailRead className="h-5 w-5 text-white" />
                   </div>
-                  <div className="text-white">Yourname@Email.Com</div>
+                  <div className="text-white">
+                    <Link
+                      target="_blank"
+                      to="mailto:shashwatchovatiya316@gmail.com"
+                    >
+                      warriorssportsclub3920@gamilcom
+                    </Link>
+                  </div>
                 </div>
                 <div className="flex items-center mt-5">
                   <div className="bg-red-500 rounded-full p-2 mr-3">
                     <FiPhoneCall className="h-5 w-5 text-white" />
                   </div>
-                  <div className="text-white">+91 9979392775</div>
+                  <div className="text-white">
+                    <Link to="tel:+918866187676" target="_blank">
+                      +91 8866187676
+                    </Link>
+                  </div>
                 </div>
                 <div className="flex items-center mt-5">
                   <div className="bg-red-500 rounded-full p-2 mr-3">
                     <MdMoreTime className="h-5 w-5 text-white" />
                   </div>
                   <div className="text-white">
-                    Office Hours: 8AM - 11PM
-                    <br />
-                    Sunday - Weekend Day
+                    Office Hours: 6AM - 11PM
                   </div>
                 </div>
               </div>

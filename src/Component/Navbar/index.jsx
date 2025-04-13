@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+// import logo from "../../assets/Header/Header.png";
 
 const menuItems = [
   {
@@ -40,11 +41,17 @@ const Navbar = () => {
   };
 
   return (
-    <div className="z-50 w-full bg-gradient-to-t from-red-700/70 to-blue-950 text-white py-5 fixed">
+    <div className="w-full bg-gradient-to-t from-red-700/70 text-white py-5 fixed">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <NavLink to="/" className="font-bold">
-            Warriors Sports Club
+            {/* <img
+              src={logo}
+              alt="Warrior Sport Club"
+              height={170}
+              width={170}
+              style={{ objectFit: "cover" }}
+            /> */}
           </NavLink>
         </div>
         <div className="hidden lg:block">

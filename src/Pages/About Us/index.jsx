@@ -191,26 +191,6 @@ const AboutUs = () => {
                   className="md:h-96 h-64"
                 />
               </div>
-
-              {/* Founder Section */}
-              <div className="absolute top-16 left-20">
-                <div className="flex items-center mb-2">
-                  <p className="md:ml-40 ml-28 md:mt-10 text-l font-normal">
-                    Founder: Harshal Sir
-                  </p>
-                </div>
-                <div className=" h-1 bg-orange-500 md:ml-20 ml-8 w-[250px]"></div>
-              </div>
-
-              {/* Co-Founder Section */}
-              {/* <div className="absolute top-40 left-20">
-              <div className="flex items-center mb-2">
-                <p className="ml-2 text-xl font-semibold">
-                  Co-Founder: Roshan Pole
-                </p>
-              </div>
-              <div className="w-32 h-1 bg-orange-500"></div>
-            </div> */}
             </div>
           </div>
 

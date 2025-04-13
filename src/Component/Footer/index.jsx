@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 
 import { Col, Row } from "antd";
+import { motion } from "framer-motion";
 import React from "react";
 import { CiLocationOn, CiMail, CiMobile3 } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import img from "../../assets/Footer/footer.jpg";
-import { motion } from "framer-motion";
 const FooterImg = {
   backgroundImage: `url(${img})`,
   backgroundPosition: "bottom",
@@ -82,12 +82,11 @@ export default function Footer() {
                   <div className="flex items-center gap-2">
                     <CiLocationOn className="lg:w-24 md:w-14 w-20 " />
                     <Link
-                      to="https://maps.app.goo.gl/TKWf7JvD6T2d9hfw7"
+                      to="https://www.google.co.in/maps/place/Warriors+Sports+Club/@23.0718038,72.6731589,17z/data=!3m2!4b1!5s0x395e873261848589:0x3c76073c27bd3504!4m6!3m5!1s0x395e87b72003a5e1:0x10535b813adc4e38!8m2!3d23.0718038!4d72.6757338!16s%2Fg%2F11rpkyd258?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D"
                       target="_blank"
                     >
-                      B-503, Divyajivan Elegance, Nikol Gam Rd, opp. Vrundavan
-                      Farm, Nikol, Ahmedabad, Gujarat
-                      382350
+                      308 3rd Floor Pearl Plaza Nr Maharshi Sandipani School
+                      Haridarshan Cross, Road, Naroda, Ahmedabad, Gujarat 382330
                     </Link>
                   </div>
 
@@ -100,8 +99,11 @@ export default function Footer() {
 
                   <div className="flex items-center gap-2">
                     <CiMail className="w-10" />
-                    <Link target="_blank" to="mailto:shashwatchovatiya316@gmail.com">
-                      abc@gmail.com
+                    <Link
+                      target="_blank"
+                      to="mailto:shashwatchovatiya316@gmail.com"
+                    >
+                      warriorssportsclub3920@gamilcom
                     </Link>
                   </div>
                 </div>

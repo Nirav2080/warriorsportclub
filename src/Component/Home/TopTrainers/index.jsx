@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import image1 from "../../../assets/Home/TopTrainers/Image1.jpg";
+import image1 from "../../../assets/Home/TopTrainers/1.jpg";
 import image2 from "../../../assets/Home/TopTrainers/Image2.jpg";
 import image3 from "../../../assets/Home/TopTrainers/Image3.jpg";
 import image4 from "../../../assets/Home/TopTrainers/Image4.jpg";
@@ -40,9 +40,11 @@ const HeadVariants = {
 const TopTrainers = [
   {
     id: 1,
-    name: "Ben Nebert",
+    name: "JACKY GAYKAWAD",
     image: image1,
-    experience: "Baseball Trainer",
+    degree: "Black belt 1st dan",
+    title: "International player",
+    experience: "4 years of experience of coaching",
   },
   {
     id: 2,
@@ -77,7 +79,7 @@ function index() {
         className="text-center space-y-4"
       >
         <h1 className="md:text-4xl text-2xl font-bold text-orange-600 ">
-          Our Top Trainers
+          Our Top Coaches
         </h1>
         <h3 className="md:w-3/4 w-full mx-auto md:text-lg ">
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -102,6 +104,8 @@ function index() {
             <img src={data.image} alt={data.name} />
             <div className="text-center">
               <h3 className="font-bold text-2xl">{data.name}</h3>
+              <p>{data.degree}</p>
+              <p>{data.title}</p>
               <p>{data.experience}</p>
             </div>
           </motion.div>
