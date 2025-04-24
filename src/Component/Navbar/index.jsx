@@ -79,7 +79,7 @@ const Navbar = () => {
         ></div>
 
         {/* Sidebar panel with transparent background */}
-        <div className="absolute right-0 top-0 h-full w-full bg-transparent text-white p-6">
+        <div className="absolute right-0 top-0 h-full w-full bg-black text-white p-6">
           <div className="flex justify-between items-center">
             <NavLink
               to="/"
