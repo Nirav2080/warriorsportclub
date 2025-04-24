@@ -92,8 +92,8 @@ export default function Footer() {
 
                   <div className="flex items-center gap-2">
                     <CiMobile3 className="w-10" />
-                    <Link to="tel:+918866187676" target="_blank">
-                      +91 8866187676
+                    <Link to="tel:+919979392775" target="_blank">
+                      +91 9979392775
                     </Link>
                   </div>
 
@@ -163,7 +163,7 @@ export default function Footer() {
                       </Link>
                       <Link
                         className="flex space-y-5"
-                        to="https://wa.me/918866187676?text=Hello%2C%20I%20am%20interested%20in%20knowing%20more%20about%20Fame%20Adda.%20Can%20you%20please%20provide%20me%20with%20more%20details%3F"
+                        to="https://wa.me/919979392775?text=Hello%2C%20I%20am%20interested%20in%20knowing%20more%20about%20Fame%20Adda.%20Can%20you%20please%20provide%20me%20with%20more%20details%3F"
                         target="_blank"
                       >
                         <li className="duration-150 hover:translate-x-1 hover:text-primary">

@@ -408,8 +408,8 @@ const ContactUs = () => {
                     <FiPhoneCall className="h-5 w-5 text-white" />
                   </div>
                   <div className="text-white">
-                    <Link to="tel:+918866187676" target="_blank">
-                      +91 8866187676
+                    <Link to="tel:+919979392775" target="_blank">
+                      +91 9979392775
                     </Link>
                   </div>
                 </div>
@@ -417,9 +417,7 @@ const ContactUs = () => {
                   <div className="bg-red-500 rounded-full p-2 mr-3">
                     <MdMoreTime className="h-5 w-5 text-white" />
                   </div>
-                  <div className="text-white">
-                    Office Hours: 6AM - 11PM
-                  </div>
+                  <div className="text-white">Office Hours: 6AM - 11PM</div>
                 </div>
               </div>
             </motion.div>
