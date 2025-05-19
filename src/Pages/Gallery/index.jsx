@@ -7,14 +7,17 @@ import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import Fighter from "../../assets/Home/Gallery/1.jpeg";
-import Basketball from "../../assets/Home/Gallery/2.jpg";
-import Cricket from "../../assets/Home/Gallery/Cricket.jpg";
-import Hockey from "../../assets/Home/Gallery/Hockey.jpg";
-import Judo from "../../assets/Home/Gallery/Judo.jpg";
-import Rugby from "../../assets/Home/Gallery/Rugby.jpg";
-import Running from "../../assets/Home/Gallery/Running.jpg";
-import Tennis from "../../assets/Home/Gallery/Tennis.jpg";
+import Image1 from "../../assets/Gallery/1.jpeg";
+import Image10 from "../../assets/Gallery/10.jpeg";
+import Image11 from "../../assets/Gallery/11.jpeg";
+import Image2 from "../../assets/Gallery/2.jpg";
+import Image3 from "../../assets/Gallery/3.jpg";
+import Image4 from "../../assets/Gallery/4.png";
+import Image5 from "../../assets/Gallery/5.png";
+import Image6 from "../../assets/Gallery/6.jpg";
+import Image7 from "../../assets/Gallery/7.jpg";
+import Image8 from "../../assets/Gallery/8.jpeg";
+import Image9 from "../../assets/Gallery/9.jpeg";
 
 import { motion } from "framer-motion";
 
@@ -46,14 +49,17 @@ const fadeVariants = {
 };
 
 const ImageData = [
-  { id: 1, title: "Fighter", image: Fighter },
-  { id: 2, title: "Basketball", image: Basketball },
-  { id: 3, title: "Hockey", image: Hockey },
-  { id: 4, title: "Rugby", image: Rugby },
-  { id: 5, title: "Judo", image: Judo },
-  { id: 6, title: "Cricket", image: Cricket },
-  { id: 7, title: "Running", image: Running },
-  { id: 8, title: "Tennis", image: Tennis },
+  { id: 1, title: "Image1", image: Image1 },
+  { id: 2, title: "Image2", image: Image2 },
+  { id: 3, title: "Image3", image: Image3 },
+  { id: 4, title: "Image4", image: Image4 },
+  { id: 5, title: "Image5", image: Image5 },
+  { id: 6, title: "Image6", image: Image6 },
+  { id: 7, title: "Image7", image: Image7 },
+  { id: 8, title: "Image8", image: Image8 },
+  { id: 9, title: "Image9", image: Image9 },
+  { id: 10, title: "Image10", image: Image10 },
+  { id: 11, title: "Image11", image: Image11 },
 ];
 
 const Gallery = () => {
@@ -78,10 +84,10 @@ const Gallery = () => {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="flex flex-col px-10 py-6 md:w-1/2 w-full content-center "
+          className="flex flex-col px-10 py-6 md:w-1/2 w-full content-center"
         >
-          <h1 className="text-5xl font-bold ">Our Gallery</h1>
-          <p className="w-full mt-6">
+          <h1 className="text-5xl font-bold">Our Gallery</h1>
+          <p className="w-full mt-6 text-white">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry’s standard dummy text
             ever since the 1500s.
@@ -95,7 +101,7 @@ const Gallery = () => {
           className="flex items-center justify-center h-auto w-1/2"
         >
           <img
-            className="md:w-96 md:h-96 w-60"
+            className="md:w-96 md:h-96 w-60 object-contain"
             src="https://template-kit.evonicmedia.com/layout43/wp-content/uploads/2023/11/floorball-female-player-isolated-white-action-motion-concept.png"
             alt=""
           />
@@ -113,7 +119,7 @@ const Gallery = () => {
         >
           Incredible Memories In Athletic Aim
         </motion.div>
-        <p className="flex text-[#60565c] mt-5 justify-between ">
+        <p className="flex text-[#60565c] mt-5 justify-between">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry’s standard dummy text ever
           since the 1500s, when an unknown printer took.
@@ -130,7 +136,6 @@ const Gallery = () => {
       <div className="lg:w-[50%] w-[90%] mx-auto mt-20">
         {/* Main Swiper */}
         <Swiper
-          style={{ width: "100%", height: "auto" }}
           spaceBetween={10}
           navigation={true}
           thumbs={{ swiper: thumbsSwiper }}
@@ -139,11 +144,13 @@ const Gallery = () => {
         >
           {ImageData.map((data) => (
             <SwiperSlide key={data.id}>
-              <img
-                src={data.image}
-                alt={data.title}
-                className="w-full h-[400px] object-contain rounded-xl"
-              />
+              <div className="w-full aspect-video">
+                <img
+                  src={data.image}
+                  alt={data.title}
+                  className="w-full h-full object-contain rounded-xl"
+                />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -163,7 +170,7 @@ const Gallery = () => {
               <img
                 src={data.image}
                 alt={data.title}
-                className="w-full lg:h-[100px] h-[60px] object-fill rounded-md cursor-pointer"
+                className="w-full lg:h-[100px] h-[60px] object-cover rounded-md cursor-pointer"
               />
             </SwiperSlide>
           ))}
